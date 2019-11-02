@@ -1,0 +1,33 @@
+﻿@page "/"
+@using Elsa.Activities.Workflows.Extensions
+@using Elsa.Models
+@inject IWorkflowInvoker WorkflowInvoker
+
+<EditForm Model="@registrationModel" OnValidSubmit="@HandleFormSubmission" class="form-signup">
+
+    <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <InputText type="text" id="name" @bind-Value="@registrationModel.Name" placeholder="Name" class="form-control" />
+    <InputText type="email" id="email" @bind-Value="@registrationModel.Email" placeholder="Email" class="form-control" />
+    <InputText type="password" id="password" @bind-Value="@registrationModel.Password" placeholder="Password" class="form-control" />
+    <InputText type="password" id="repeatPassword" @bind-Value="@registrationModel.RepeatPassword" placeholder="Repeat password" class="form-control" />
+    
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+</EditForm>
+
+@code {
+
+    private RegistrationModel registrationModel = new RegistrationModel();
+
+    private async Task HandleFormSubmission()
+    {
+        var input = new Variables();
+        input.SetVariable("RegistrationModel", registrationModel);
+
+        await WorkflowInvoker.TriggerSignalAsync("RegisterUser", input);
+    }
+
+}
