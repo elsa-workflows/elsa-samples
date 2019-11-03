@@ -1,0 +1,41 @@
+﻿@page "/"
+@using Elsa.Activities.Workflows.Extensions
+@using Elsa.Models
+@inject IWorkflowInvoker WorkflowInvoker
+
+<div class="form-signup">
+    <EditForm Model="@RegistrationModel" OnValidSubmit="@HandleFormSubmission" hidden="@ShowConfirmation">
+
+        <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+
+        <InputText type="text" id="name" @bind-Value="@RegistrationModel.Name" placeholder="Name" class="form-control" />
+        <InputText type="email" id="email" @bind-Value="@RegistrationModel.Email" placeholder="Email" class="form-control" />
+        <InputText type="password" id="password" @bind-Value="@RegistrationModel.Password" placeholder="Password" class="form-control" />
+        <InputText type="password" id="repeatPassword" @bind-Value="@RegistrationModel.RepeatPassword" placeholder="Repeat password" class="form-control" />
+    
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+    </EditForm>
+
+    <div hidden="@(!ShowConfirmation)">
+        Thanks for signing up! Please check your email.
+    </div>
+</div>
+
+@code {
+
+    private RegistrationModel RegistrationModel { get; set; } = new RegistrationModel();
+    private bool ShowConfirmation { get; set; } = false;
+
+    private async Task HandleFormSubmission()
+    {
+        var input = new Variables();
+        input.SetVariable("RegistrationModel", RegistrationModel);
+
+        await WorkflowInvoker.TriggerSignalAsync("RegisterUser", input);
+        ShowConfirmation = true;
+    }
+
+}

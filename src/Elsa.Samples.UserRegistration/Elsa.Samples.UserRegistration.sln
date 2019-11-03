@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.UserRegistration.Web", "src\Elsa.Samples.UserRegistration.Web\Elsa.Samples.UserRegistration.Web.csproj", "{F687B091-8827-4583-9959-E284D1576CBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{DD34F4A2-0B94-4F17-91FE-7A98E7466C77}"
+ProjectSection(SolutionItems) = preProject
+	docker-compose.yaml = docker-compose.yaml
+	..\..\NuGet.config = ..\..\NuGet.config
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DD8F2318-D646-45B6-9FD9-F3E3B7B1058D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F687B091-8827-4583-9959-E284D1576CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F687B091-8827-4583-9959-E284D1576CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F687B091-8827-4583-9959-E284D1576CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F687B091-8827-4583-9959-E284D1576CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F687B091-8827-4583-9959-E284D1576CBF} = {DD8F2318-D646-45B6-9FD9-F3E3B7B1058D}
+	EndGlobalSection
+EndGlobal
