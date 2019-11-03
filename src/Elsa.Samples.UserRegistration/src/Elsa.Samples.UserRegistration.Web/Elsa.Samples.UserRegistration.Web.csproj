@@ -4,16 +4,10 @@
         <TargetFramework>netcoreapp3.0</TargetFramework>
     </PropertyGroup>
 
-<!--    <ItemGroup>-->
-<!--      <PackageReference Include="Elsa" Version="1.0.0.123" />-->
-<!--      <PackageReference Include="Elsa.Dashboard" Version="1.0.0.119-rc5" />-->
-<!--      <PackageReference Include="Elsa.Persistence.MongoDb" Version="1.0.0.119-rc5" />-->
-<!--    </ItemGroup>-->
-
     <ItemGroup>
-      <ProjectReference Include="..\..\..\..\..\elsa-core\src\core\Elsa\Elsa.csproj" />
-      <ProjectReference Include="..\..\..\..\..\elsa-core\src\dashboard\Elsa.Dashboard\Elsa.Dashboard.csproj" />
-      <ProjectReference Include="..\..\..\..\..\elsa-core\src\persistence\Elsa.Persistence.MongoDb\Elsa.Persistence.MongoDb.csproj" />
+      <PackageReference Include="Elsa" Version="1.0.1.138" />
+      <PackageReference Include="Elsa.Dashboard" Version="1.0.1.138" />
+      <PackageReference Include="Elsa.Persistence.MongoDb" Version="1.0.1.138" />
     </ItemGroup>
 
 </Project>
