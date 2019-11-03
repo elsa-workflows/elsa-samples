@@ -6,6 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{DD
 ProjectSection(SolutionItems) = preProject
 	docker-compose.yaml = docker-compose.yaml
 	..\..\NuGet.config = ..\..\NuGet.config
+	user-registration-workflow.json = user-registration-workflow.json
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DD8F2318-D646-45B6-9FD9-F3E3B7B1058D}"
