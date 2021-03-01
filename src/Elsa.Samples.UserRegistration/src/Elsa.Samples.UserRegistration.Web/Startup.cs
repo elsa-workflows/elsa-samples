@@ -8,7 +8,6 @@ using Elsa.Samples.UserRegistration.Web.Extensions;
 using Elsa.Samples.UserRegistration.Web.Handlers;
 using Elsa.Samples.UserRegistration.Web.Models;
 using Elsa.Samples.UserRegistration.Web.Services;
-using Fluid;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -32,7 +31,7 @@ namespace Elsa.Samples.UserRegistration.Web
             services.AddServerSideBlazor();
 
             services
-                // Add Elsa services. 
+                // Add Elsa services.
                 .AddElsa(
                     elsa =>
                     {
@@ -73,7 +72,7 @@ namespace Elsa.Samples.UserRegistration.Web
 
             app.UseStaticFiles();
 
-            // Add Elsa's middleware to handle HTTP requests to workflows.  
+            // Add Elsa's middleware to handle HTTP requests to workflows.
             app.UseHttpActivities();
 
             app.UseRouting();

@@ -1,16 +1,16 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Elsa.Attributes;
+﻿using Elsa.Attributes;
 using Elsa.Expressions;
 using Elsa.Results;
 using Elsa.Samples.UserRegistration.Web.Models;
 using Elsa.Services;
 using Elsa.Services.Models;
 using MongoDB.Driver;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Elsa.Samples.UserRegistration.Web.Activities
 {
-    [ActivityDefinition(Category = "Users", Description = "Delete a User", Icon = "fas fa-user-minus", Outcomes = new[]{ OutcomeNames.Done, "Not Found" })]
+    [ActivityDefinition(Category = "Users", Description = "Delete a User", Icon = "fad fa-user-minus", Outcomes = new[]{ OutcomeNames.Done, "Not Found" })]
     public class DeleteUser : Activity
     {
         private readonly IMongoCollection<User> _store;
