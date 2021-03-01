@@ -1,7 +1,8 @@
 ﻿@page "/"
+
 @using Elsa.Activities.Workflows.Extensions
 @using Elsa.Models
-@using Elsa.Services
+
 @inject IWorkflowInvoker WorkflowInvoker
 
 <div class="form-signup">
@@ -30,6 +31,7 @@
 </div>
 
 @code {
+
     private RegistrationModel RegistrationModel { get; set; } = new();
     private bool ShowConfirmation { get; set; }
 

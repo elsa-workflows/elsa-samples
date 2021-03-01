@@ -36,7 +36,7 @@ namespace Elsa.Samples.UserRegistration.Web
                     elsa =>
                     {
                         // Configure Elsa to use the MongoDB provider.
-                        elsa.AddMongoDbStores(Configuration, databaseName: "UserRegistration", connectionStringName: "MongoDb");
+                        elsa.AddMongoDbStores(Configuration, "UserRegistration", "MongoDb");
                     })
 
                 // Add Elsa Dashboard services.
