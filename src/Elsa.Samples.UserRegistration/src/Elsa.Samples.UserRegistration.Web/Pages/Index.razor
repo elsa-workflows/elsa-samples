@@ -32,7 +32,7 @@
     private async Task HandleFormSubmission()
     {
         var input = new Variables();
-        input.SetVariable("RegistrationModel", RegistrationModel);
+        input.AddVariable("RegistrationModel", RegistrationModel);
 
         await WorkflowInvoker.TriggerSignalAsync("RegisterUser", input);
         ShowConfirmation = true;

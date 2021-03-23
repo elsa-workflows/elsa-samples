@@ -67,7 +67,7 @@ namespace Elsa.Samples.UserRegistration.Web.Activities
 
             await _store.InsertOneAsync(user, cancellationToken: cancellationToken);
 
-            Output.SetVariable("User", user);
+            Output.AddVariable("User", user);
             return Done();
         }
     }
