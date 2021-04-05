@@ -5,7 +5,6 @@ services:
     image: mongo
     ports:
     - "27017:27017"
-    - 
   smtp4dev:
     image: rnwood/smtp4dev:linux-amd64-3.1.0-ci0856
     ports:
