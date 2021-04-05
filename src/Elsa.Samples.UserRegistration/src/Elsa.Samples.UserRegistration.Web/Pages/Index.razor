@@ -1,6 +1,8 @@
 ﻿@page "/"
+
 @using Elsa.Activities.Workflows.Extensions
 @using Elsa.Models
+
 @inject IWorkflowInvoker WorkflowInvoker
 
 <div class="form-signup">
@@ -8,14 +10,18 @@
 
         <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
 
-        <DataAnnotationsValidator/>
-        <ValidationSummary/>
+        <DataAnnotationsValidator />
+        <ValidationSummary />
 
-        <InputText type="text" id="name" @bind-Value="@RegistrationModel.Name" placeholder="Name" class="form-control" />
-        <InputText type="email" id="email" @bind-Value="@RegistrationModel.Email" placeholder="Email" class="form-control" />
-        <InputText type="password" id="password" @bind-Value="@RegistrationModel.Password" placeholder="Password" class="form-control" />
-        <InputText type="password" id="repeatPassword" @bind-Value="@RegistrationModel.RepeatPassword" placeholder="Repeat password" class="form-control" />
-    
+        <InputText type="text" id="name" @bind-Value="@RegistrationModel.Name" placeholder="Name"
+            class="form-control" />
+        <InputText type="email" id="email" @bind-Value="@RegistrationModel.Email" placeholder="Email"
+            class="form-control" />
+        <InputText type="password" id="password" @bind-Value="@RegistrationModel.Password" placeholder="Password"
+            class="form-control" />
+        <InputText type="password" id="repeatPassword" @bind-Value="@RegistrationModel.RepeatPassword"
+            placeholder="Repeat password" class="form-control" />
+
         <button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
     </EditForm>
 
@@ -26,8 +32,8 @@
 
 @code {
 
-    private RegistrationModel RegistrationModel { get; set; } = new RegistrationModel();
-    private bool ShowConfirmation { get; set; } = false;
+    private RegistrationModel RegistrationModel { get; set; } = new();
+    private bool ShowConfirmation { get; set; }
 
     private async Task HandleFormSubmission()
     {

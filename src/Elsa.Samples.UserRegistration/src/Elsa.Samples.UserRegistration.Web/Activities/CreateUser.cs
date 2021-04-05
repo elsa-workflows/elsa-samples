@@ -1,18 +1,17 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Elsa.Attributes;
+﻿using Elsa.Attributes;
 using Elsa.Expressions;
-using Elsa.Extensions;
 using Elsa.Results;
 using Elsa.Samples.UserRegistration.Web.Models;
 using Elsa.Samples.UserRegistration.Web.Services;
 using Elsa.Services;
 using Elsa.Services.Models;
 using MongoDB.Driver;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Elsa.Samples.UserRegistration.Web.Activities
 {
-    [ActivityDefinition(Category = "Users", Description = "Create a User", Icon = "fas fa-user-plus", Outcomes = new[] { OutcomeNames.Done })]
+    [ActivityDefinition(Category = "Users", Description = "Create a User", Icon = "fad fa-user-plus", Outcomes = new[] { OutcomeNames.Done })]
     public class CreateUser : Activity
     {
         private readonly IMongoCollection<User> _store;
