@@ -1,6 +1,6 @@
-﻿using System.Security.Cryptography;
-using Elsa.Samples.UserRegistration.Web.Models;
+﻿using Elsa.Samples.UserRegistration.Web.Models;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System.Security.Cryptography;
 
 namespace Elsa.Samples.UserRegistration.Web.Services
 {
@@ -8,7 +8,7 @@ namespace Elsa.Samples.UserRegistration.Web.Services
     {
         public HashedPassword HashPassword(string password)
         {
-            // Generate a 128-bit salt using a secure PRNG.
+            // Generate a 128-bit salt using a secure pRng.
             var salt = new byte[128 / 8];
             using (var rng = RandomNumberGenerator.Create())
             {
@@ -17,7 +17,7 @@ namespace Elsa.Samples.UserRegistration.Web.Services
 
             return HashPassword(password, salt);
         }
-        
+
         public HashedPassword HashPassword(string password, byte[] salt)
         {
             // Derive a 256-bit subkey (use HMACSHA1 with 10,000 iterations)
@@ -25,9 +25,9 @@ namespace Elsa.Samples.UserRegistration.Web.Services
                 password,
                 salt,
                 KeyDerivationPrf.HMACSHA1,
-                iterationCount: 10000,
-                numBytesRequested: 256 / 8);
-            
+                10000,
+                256 / 8);
+
             return new HashedPassword(hashed, salt);
         }
     }

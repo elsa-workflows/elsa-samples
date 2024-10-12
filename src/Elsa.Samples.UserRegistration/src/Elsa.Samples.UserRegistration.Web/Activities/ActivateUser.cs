@@ -1,6 +1,4 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Elsa.Attributes;
+﻿using Elsa.Attributes;
 using Elsa.Expressions;
 using Elsa.Results;
 using Elsa.Samples.UserRegistration.Web.Models;
@@ -8,10 +6,12 @@ using Elsa.Services;
 using Elsa.Services.Models;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Elsa.Samples.UserRegistration.Web.Activities
 {
-    [ActivityDefinition(Category = "Users", Description = "Activate a User", Icon = "fas fa-user-check", Outcomes = new[]{ OutcomeNames.Done, "Not Found" })]
+    [ActivityDefinition(Category = "Users", Description = "Activate a User", Icon = "fad fa-user-check", Outcomes = new[]{ OutcomeNames.Done, "Not Found" })]
     public class ActivateUser : Activity
     {
         private readonly IMongoCollection<User> _store;
@@ -38,7 +38,7 @@ namespace Elsa.Samples.UserRegistration.Web.Activities
 
             user.IsActive = true;
             await _store.ReplaceOneAsync(x => x.Id == userId, user, cancellationToken: cancellationToken);
-            
+
             return Done();
         }
     }
