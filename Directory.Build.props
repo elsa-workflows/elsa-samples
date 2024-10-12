@@ -1,0 +1,25 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Elsa Workflows Community</Authors>
+        <Copyright>2023</Copyright>
+        
+        <RepositoryUrl>https://github.com/elsa-workflows/elsa-samples</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        
+        <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    </PropertyGroup>
+    <PropertyGroup>
+        <NoWarn>$(NoWarn);CS0162;CS1591</NoWarn>
+        <!-- IL trimming warnings -->
+        <NoWarn>$(NoWarn);IL2026;IL2046;IL2057;IL2067;IL2070;IL2072;IL2075;IL2087;IL2091</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup>
+        <ElsaVersion>3.3.0-preview.2239</ElsaVersion>
+        <SystemTextJsonVersion>8.0.5</SystemTextJsonVersion>
+    </PropertyGroup>
+</Project>

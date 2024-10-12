@@ -1,0 +1,66 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageVersion Include="JetBrains.Annotations" Version="2024.2.0" />
+        <PackageVersion Include="System.Net.Http" Version="4.3.4"/>
+        <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1"/>
+        <PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="4.10.0"/>
+        <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.10.0"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.10"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6"/>
+        <PackageVersion Include="AutoMapper" Version="13.0.1"/>
+        <PackageVersion Include="Azure.Identity" Version="1.12.1"/>
+        <PackageVersion Include="Azure.ResourceManager" Version="1.13.0"/>
+        <PackageVersion Include="Bogus" Version="35.6.1"/>
+        <PackageVersion Include="Proto.Cluster.AzureContainerApps" Version="1.7.0"/>
+        <PackageVersion Include="Proto.Persistence.Sqlite" Version="1.7.0"/>
+        <PackageVersion Include="Elsa" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Agents.Activities" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Agents.Api" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Agents.Core" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Agents.Models" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Agents.Persistence" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Agents.Persistence.EntityFrameworkCore" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Agents.Persistence.EntityFrameworkCore.Sqlite" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.AzureServiceBus" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.CSharp" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Dapper" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.DropIns" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.DropIns.Core" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Elasticsearch" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Email" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.EntityFrameworkCore" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.EntityFrameworkCore.Sqlite" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.EntityFrameworkCore.PostgreSql" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Hangfire" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Http" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Identity" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.JavaScript" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.JavaScript.Libraries" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Liquid" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.MassTransit" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.MassTransit.AzureServiceBus" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.MassTransit.RabbitMq" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.MongoDb" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.OrchardCore" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.SasTokens" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Telnyx" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Tenants" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Tenants.AspNetCore" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Testing.Shared.Integration" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Webhooks" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.WorkflowContexts" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.WorkflowProviders.BlobStorage" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Api" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Runtime" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Runtime.Distributed" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Runtime.ProtoActor" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Quartz" Version="$(ElsaVersion)"/>
+    </ItemGroup>
+</Project>

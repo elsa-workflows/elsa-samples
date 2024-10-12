@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+    </PropertyGroup>
+    
+</Project>
