@@ -1,6 +1,6 @@
 using System.Security.Claims;
 using Elsa;
-using Elsa.EntityFrameworkCore.Common;
+using Elsa.EntityFrameworkCore;
 using Elsa.EntityFrameworkCore.Extensions;
 using Elsa.EntityFrameworkCore.Modules.Management;
 using Elsa.EntityFrameworkCore.Modules.Runtime;
@@ -38,11 +38,11 @@ builder.Services.AddElsa(elsa =>
     elsa.UseIdentity(options => identitySection.Bind(options));
     elsa.UseTenants(tenantsFeature =>
     {
-        tenantsFeature.TenantsOptions = options =>
+        tenantsFeature.ConfigureOptions(options =>
         {
             tenantsSection.Bind(options);
             options.TenantResolverPipelineBuilder.Append<ClaimsTenantResolver>();
-        };
+        });
         tenantsFeature.UseConfigurationBasedTenantsProvider();
     });
 

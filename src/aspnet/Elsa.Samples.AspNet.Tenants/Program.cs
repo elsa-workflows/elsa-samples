@@ -1,5 +1,5 @@
 using Elsa;
-using Elsa.EntityFrameworkCore.Common;
+using Elsa.EntityFrameworkCore;
 using Elsa.EntityFrameworkCore.Extensions;
 using Elsa.EntityFrameworkCore.Modules.Management;
 using Elsa.EntityFrameworkCore.Modules.Runtime;
@@ -44,11 +44,11 @@ builder.Services.AddElsa(elsa =>
 
     elsa.UseTenants(tenantsFeature =>
     {
-        tenantsFeature.TenantsOptions = options =>
+        tenantsFeature.ConfigureOptions(options =>
         {
             multiTenancySection.Bind(options);
             options.TenantResolverPipelineBuilder.Append<CurrentUserTenantResolver>();
-        };
+        });
         tenantsFeature.UseConfigurationBasedTenantsProvider();
     });
 

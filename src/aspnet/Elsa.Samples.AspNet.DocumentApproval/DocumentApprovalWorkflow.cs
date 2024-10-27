@@ -4,7 +4,6 @@ using System.Net.Mime;
 using Elsa.Expressions.Models;
 using Elsa.Extensions;
 using Elsa.Http;
-using Elsa.Http.Models;
 using Elsa.Workflows;
 using Elsa.Workflows.Activities;
 using Elsa.Workflows.Runtime.Activities;
