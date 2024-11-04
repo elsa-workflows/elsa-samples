@@ -11,7 +11,12 @@ var identityTokenSection = identitySection.GetSection("Tokens");
 builder.Services.AddElsa(elsa =>
 {
     // Configure management feature to use EF Core.
-    elsa.UseWorkflowManagement(management => management.UseEntityFrameworkCore());
+    elsa.UseWorkflowManagement(management =>
+    {
+        management
+            .AddActivitiesFrom<Program>()
+            .UseEntityFrameworkCore();
+    });
 
     elsa.UseWorkflowRuntime(runtime =>
     {
@@ -25,7 +30,10 @@ builder.Services.AddElsa(elsa =>
     elsa.UseWorkflowsApi();
 
     // Use Hangfire.
-    elsa.UseHangfire(hangfire => hangfire.UseSqliteStorage(sqlite => sqlite.NameOrConnectionString = "elsa.sqlite.db"));
+    elsa.UseHangfire(hangfire =>
+    {
+        hangfire.UseSqliteStorage(sqlite => sqlite.NameOrConnectionString = "elsa.sqlite.db");
+    });
     
     // Use hangfire for scheduling timer events.
     elsa.UseScheduling(scheduling => scheduling.UseHangfireScheduler());
