@@ -21,3 +21,5 @@
       ELSASERVER__URL: http://localhost:12000/elsa/api
     ports:
       - "13000:8080"
+    depends_on:
+      - elsa-server
