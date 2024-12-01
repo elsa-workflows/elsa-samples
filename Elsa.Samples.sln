@@ -127,7 +127,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorWebAssembly
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "compose", "compose", "{7CCE7D85-95C6-4CE8-A578-D392AB1CA714}"
 	ProjectSection(SolutionItems) = preProject
-		src\compose\docker-compose.yml = src\compose\docker-compose.yml
+		src\compose\docker-compose-basic.yml = src\compose\docker-compose-basic.yml
+		src\compose\docker-compose-postgres.yml = src\compose\docker-compose-postgres.yml
+		src\compose\docker-compose-traefik.yml = src\compose\docker-compose-traefik.yml
+		src\compose\docker-compose-elsa-studio-server.yml = src\compose\docker-compose-elsa-studio-server.yml
 	EndProjectSection
 EndProject
 Global

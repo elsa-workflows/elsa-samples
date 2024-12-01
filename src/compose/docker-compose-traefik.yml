@@ -1,0 +1,60 @@
+﻿services:
+  
+  # PostgreSQL database.
+  postgres:
+    image: postgres:latest
+    command: -c 'max_connections=2000'
+    environment:
+      POSTGRES_USER: elsa
+      POSTGRES_PASSWORD: elsa
+      POSTGRES_DB: elsa
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5632:5432"
+    networks:
+      - elsa-network
+ 
+  # Elsa Server and Studio behind Traefik and configured with PostgreSQL.
+  elsa-server-and-studio:
+    image: elsaworkflows/elsa-server-and-studio-v3-preview:latest
+    pull_policy: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      HTTP_PORTS: 8080
+      HOSTING__BASEURL: http://elsa.localhost
+      HOSTING__BASEPATH: 
+      DATABASEPROVIDER: PostgreSql
+      CONNECTIONSTRINGS__POSTGRES: Host=postgres;Port=5432;Database=elsa;Username=elsa;Password=elsa
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.elsa.rule=Host(`elsa.localhost`)"
+      - "traefik.http.services.elsa.loadbalancer.server.port=8080"
+    networks:
+      - elsa-network
+    depends_on:
+        - postgres
+  
+  # Traefik reverse proxy.
+  traefik:
+    image: traefik:2.7.2
+    command:
+      - "--api.insecure=true" # Enables the Traefik dashboard
+      - "--providers.docker=true" # Enables Docker as the configuration source
+      - "--entrypoints.web.address=:80" # Sets up the HTTP entry point on port 80
+    ports:
+      - "1280:80" # Expose HTTP port. Access Elsa Studio at: http://elsa.localhost:1280/
+      - "8080:8080" # Expose Traefik dashboard
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock" # Allows Traefik to communicate with the Docker daemon
+    networks:
+      - elsa-network
+    depends_on:
+      - elsa-server-and-studio
+      
+networks:
+  elsa-network:
+    driver: bridge
+    
+volumes:
+  postgres-data:

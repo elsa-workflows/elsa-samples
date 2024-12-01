@@ -1,0 +1,23 @@
+﻿services:
+ 
+  # Elsa Server.
+  elsa-server:
+    image: elsaworkflows/elsa-server-v3-3-0-preview:latest
+    pull_policy: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      HTTP_PORTS: 8080
+      HTTP__BASEURL: http://localhost:12000
+    ports:
+      - "12000:8080"
+  
+  # Elsa Studio connected to Elsa Server.
+  elsa-studio:
+    image: elsaworkflows/elsa-studio-v3-3-0-preview:latest
+    pull_policy: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      HTTP_PORTS: 8080
+      ELSASERVER__URL: http://localhost:12000/elsa/api
+    ports:
+      - "13000:8080"

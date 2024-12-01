@@ -1,0 +1,32 @@
+﻿services:
+  
+  postgres:
+    image: postgres:latest
+    command: -c 'max_connections=2000'
+    environment:
+      POSTGRES_USER: elsa
+      POSTGRES_PASSWORD: elsa
+      POSTGRES_DB: elsa
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5532:5432"
+  
+  # Elsa Studio and Server from a single image.
+  elsa-server-and-studio:
+    image: elsaworkflows/elsa-server-and-studio-v3-3-0-preview:latest
+    pull_policy: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      HTTP_PORTS: 8080
+      HOSTING__BASEURL: http://localhost:14000
+      HOSTING__BASEPATH:
+      DATABASEPROVIDER: PostgreSql
+      CONNECTIONSTRINGS__POSTGRESQL: Server=postgres;Username=elsa;Database=elsa;Port=5432;Password=elsa;SSLMode=Prefer;MaxPoolSize=2000;Timeout=60
+    ports:
+      - "14000:8080"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres-data:
