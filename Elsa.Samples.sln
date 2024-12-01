@@ -125,6 +125,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorServerApp",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorWebAssemblyApp", "ElsaStudioBlazorWebAssemblyApp\ElsaStudioBlazorWebAssemblyApp.csproj", "{CFB8500A-D61A-4892-A052-22F8981C590E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "compose", "compose", "{7CCE7D85-95C6-4CE8-A578-D392AB1CA714}"
+	ProjectSection(SolutionItems) = preProject
+		src\compose\docker-compose.yml = src\compose\docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -187,6 +192,7 @@ Global
 		{A548F792-8343-446D-B21F-EE7C14E3472A} = {BA2E38F3-A073-4D60-AE4C-B098FD87C997}
 		{03E13DFD-5B6C-4915-934C-B7A1D1D3BC09} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 		{CFB8500A-D61A-4892-A052-22F8981C590E} = {A548F792-8343-446D-B21F-EE7C14E3472A}
+		{7CCE7D85-95C6-4CE8-A578-D392AB1CA714} = {BA2E38F3-A073-4D60-AE4C-B098FD87C997}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3E156F62-ED0C-4D02-893E-D04E5EB05F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
