@@ -11,6 +11,8 @@
       - postgres-data:/var/lib/postgresql/data
     ports:
       - "5532:5432"
+    networks:
+      - elsa-network
   
   # Elsa Studio and Server from a single image.
   elsa-server-and-studio:
@@ -30,3 +32,7 @@
 
 volumes:
   postgres-data:
+    
+networks:
+  elsa-network:
+    driver: bridge

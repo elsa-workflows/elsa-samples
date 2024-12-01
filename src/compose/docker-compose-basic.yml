@@ -10,6 +10,8 @@
       HTTP__BASEURL: http://localhost:12000
     ports:
       - "12000:8080"
+    networks:
+      - elsa-network
   
   # Elsa Studio connected to Elsa Server.
   elsa-studio:
@@ -23,3 +25,9 @@
       - "13000:8080"
     depends_on:
       - elsa-server
+    networks:
+      - elsa-network
+        
+networks:
+  elsa-network:
+    driver: bridge

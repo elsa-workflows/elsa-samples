@@ -14,7 +14,7 @@
       - "5632:5432"
     networks:
       - elsa-network
- 
+  
   # Elsa Server and Studio behind Traefik and configured with PostgreSQL.
   elsa-server-and-studio:
     image: elsaworkflows/elsa-server-and-studio-v3-3-0-preview:latest
@@ -23,17 +23,17 @@
       ASPNETCORE_ENVIRONMENT: Development
       HTTP_PORTS: 8080
       HOSTING__BASEURL: http://elsa.localhost
-      HOSTING__BASEPATH: 
+      HOSTING__BASEPATH:
       DATABASEPROVIDER: PostgreSql
       CONNECTIONSTRINGS__POSTGRES: Host=postgres;Port=5432;Database=elsa;Username=elsa;Password=elsa
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.elsa.rule=Host(`elsa.localhost`)"
       - "traefik.http.services.elsa.loadbalancer.server.port=8080"
+    depends_on:
+      - postgres
     networks:
       - elsa-network
-    depends_on:
-        - postgres
   
   # Traefik reverse proxy.
   traefik:
@@ -47,14 +47,14 @@
       - "8080:8080" # Expose Traefik dashboard
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock" # Allows Traefik to communicate with the Docker daemon
-    networks:
-      - elsa-network
     depends_on:
       - elsa-server-and-studio
-      
+    networks:
+      - elsa-network
+
+volumes:
+  postgres-data:
+
 networks:
   elsa-network:
     driver: bridge
-    
-volumes:
-  postgres-data:
