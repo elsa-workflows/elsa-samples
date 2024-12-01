@@ -22,7 +22,7 @@
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       HTTP_PORTS: 8080
-      HOSTING__BASEURL: http://elsa.localhost
+      HOSTING__BASEURL: http://elsa.localhost:1280
       HOSTING__BASEPATH:
       DATABASEPROVIDER: PostgreSql
       CONNECTIONSTRINGS__POSTGRESQL: Host=postgres;Port=5432;Database=elsa;Username=elsa;Password=elsa
