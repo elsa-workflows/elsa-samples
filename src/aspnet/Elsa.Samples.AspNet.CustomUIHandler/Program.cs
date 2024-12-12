@@ -3,6 +3,7 @@ using Elsa.EntityFrameworkCore.Modules.Management;
 using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
 using Elsa.Samples.AspNet.CustomUIHandler;
+using Elsa.Workflows;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,7 +31,8 @@ builder.Services.AddElsa(elsa =>
     elsa.AddActivity<VehicleActivity>();
 });
 
-builder.Services.AddSingleton<VehicleUIHandler>();
+builder.Services.AddScoped<IPropertyUIHandler, VehicleUIHandler>();
+builder.Services.AddScoped<IPropertyUIHandler, RefreshUIHandler>();
 builder.Services.AddCors(cors => cors.AddDefaultPolicy(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()));
 
 var app = builder.Build();
