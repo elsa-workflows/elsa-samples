@@ -44,12 +44,12 @@ builder.Services.AddElsa(elsa =>
 
     elsa.UseTenants(tenantsFeature =>
     {
-        tenantsFeature.ConfigureOptions(options =>
+        tenantsFeature.ConfigureMultitenancy(options =>
         {
             multiTenancySection.Bind(options);
             options.TenantResolverPipelineBuilder.Append<CurrentUserTenantResolver>();
         });
-        tenantsFeature.UseConfigurationBasedTenantsProvider();
+        tenantsFeature.UseConfigurationBasedTenantsProvider(options => configuration.GetSection("Multitenancy").Bind(options));
     });
 
     elsa

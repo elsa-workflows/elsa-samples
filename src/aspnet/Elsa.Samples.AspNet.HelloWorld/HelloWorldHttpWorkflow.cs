@@ -16,7 +16,7 @@ public class HelloWorldHttpWorkflow : WorkflowBase
                 new HttpEndpoint
                 {
                     Path = new("/hello-world"),
-                    SupportedMethods = new(new[] { HttpMethods.Get }),
+                    SupportedMethods = new([HttpMethods.Get]),
                     CanStartWorkflow = true
                 },
                 new WriteHttpResponse
