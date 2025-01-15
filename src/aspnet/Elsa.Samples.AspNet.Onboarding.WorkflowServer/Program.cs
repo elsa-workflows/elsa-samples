@@ -40,7 +40,8 @@ builder.Services.AddElsa(elsa =>
     elsa.UseJavaScript();
 
     // Enable SignalR for sending events to Elsa Studio for real-time updates.
-    elsa.UseRealTimeWorkflows();
+    // Disabled until https://github.com/elsa-workflows/elsa-core/releases/tag/3.2.3
+    // elsa.UseRealTimeWorkflows();
     
     // Use Webhooks feature.
     elsa.UseWebhooks(webhooks => webhooks.ConfigureSinks = options => builder.Configuration.GetSection("Webhooks:Sinks").Bind(options));
@@ -64,5 +65,7 @@ app.UseAuthorization();
 app.UseWorkflowsApi();
 app.UseJsonSerializationErrorHandler();
 app.UseWorkflows();
-app.UseWorkflowsSignalRHubs();
+
+// Disabled until https://github.com/elsa-workflows/elsa-core/releases/tag/3.2.3
+//app.UseWorkflowsSignalRHubs();
 app.Run();

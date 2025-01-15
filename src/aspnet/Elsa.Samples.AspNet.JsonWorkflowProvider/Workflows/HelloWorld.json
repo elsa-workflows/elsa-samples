@@ -17,9 +17,6 @@
           "expression": {
             "type": "Literal",
             "value": "Hello World!"
-          },
-          "memoryReference": {
-            "id": "WriteLine1:input-1"
           }
         }
       }
