@@ -31,8 +31,6 @@
         document.addEventListener('DOMContentLoaded', function () {
             Blazor.start({
                 loadBootResource: function (type, name, defaultUri, integrity) {
-                    console.log('loadBootResource', type, name, defaultUri, integrity);
-                    
                     if (defaultUri.startsWith('http'))
                         return defaultUri;
                     

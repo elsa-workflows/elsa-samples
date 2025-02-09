@@ -1,4 +1,5 @@
 using ElsaStudioDesignerRehostedApp.Middleware;
+using Microsoft.AspNetCore.StaticFiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,9 +24,18 @@ app.UseAuthorization();
 app.UseMiddleware<WasmAssetsRewritingMiddleware>();
 
 // Use Static Files instead of MapStaticAssets.
-app.UseStaticFiles();
-//app.MapStaticAssets();
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = new FileExtensionContentTypeProvider
+    {
+        Mappings =
+        {
+            // Add custom MIME type mappings for WASM
+            [".dat"] = "application/octet-stream"
+        }
+    }
+});
+
 app.MapRazorPages();
-    //.WithStaticAssets();
 
 app.Run();

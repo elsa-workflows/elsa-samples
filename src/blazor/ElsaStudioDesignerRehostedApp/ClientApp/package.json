@@ -19,6 +19,6 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "@elsa-workflows/elsa-studio-wasm": "^3.3.2"
+    "@elsa-workflows/elsa-studio-wasm": "3.4.0-custom-elements-tenant-id.813"
   }
 }
