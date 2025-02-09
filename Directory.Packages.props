@@ -64,12 +64,12 @@
         <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1"/>
         <PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="4.12.0"/>
         <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0"/>
-        <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.0"/>
-        <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0"/>
-        <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.1"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.1"/>
         <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6"/>
         <PackageVersion Include="AutoMapper" Version="13.0.1"/>
-        <PackageVersion Include="Azure.Identity" Version="1.13.1"/>
+        <PackageVersion Include="Azure.Identity" Version="1.13.2"/>
         <PackageVersion Include="Azure.ResourceManager" Version="1.13.0"/>
         <PackageVersion Include="Bogus" Version="35.6.1"/>
         <PackageVersion Include="Proto.Cluster.AzureContainerApps" Version="1.7.0"/>
