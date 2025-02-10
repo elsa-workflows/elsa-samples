@@ -68,6 +68,7 @@
         <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1"/>
         <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.1"/>
         <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6"/>
+        <PackageVersion Include="Microsoft.JSInterop" Version="9.0.1"/>
         <PackageVersion Include="AutoMapper" Version="13.0.1"/>
         <PackageVersion Include="Azure.Identity" Version="1.13.2"/>
         <PackageVersion Include="Azure.ResourceManager" Version="1.13.0"/>
