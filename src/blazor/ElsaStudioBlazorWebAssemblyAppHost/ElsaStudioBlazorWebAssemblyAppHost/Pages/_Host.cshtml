@@ -6,8 +6,8 @@
     var apiUrl = Configuration["Hosting:ApiUrl"];
     
     // Get the first segment of the request path, which represents the tenant ID.
-    var segments = Request.Path.Value!.Split('/');
-    var tenantId = segments.Length > 1 ? segments[1] : null;
+    var segments = Request.Path.Value!.Split('/', StringSplitOptions.RemoveEmptyEntries);
+    var tenantId = segments.Length is 1 or > 2 ? segments[0] : null;
     var baseRef = tenantId != null ? $"/{tenantId}/" : "/";
 }
 
@@ -33,7 +33,6 @@
     <link href="_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.css" rel="stylesheet"/>
     <link href="_content/Radzen.Blazor/css/material-base.css" rel="stylesheet">
     <link href="_content/Elsa.Studio.Shell/css/shell.css" rel="stylesheet">
-    <link href="ElsaStudioBlazorWebAssemblyApp.styles.css" rel="stylesheet">
 </head>
 
 <body>
