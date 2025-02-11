@@ -138,6 +138,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioDesignerRehostedA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorWebAssemblyApp", "src\blazor\ElsaStudioBlazorWebAssemblyApp\ElsaStudioBlazorWebAssemblyApp.csproj", "{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorWebAssemblyAppHost", "src\blazor\ElsaStudioBlazorWebAssemblyAppHost\ElsaStudioBlazorWebAssemblyAppHost\ElsaStudioBlazorWebAssemblyAppHost.csproj", "{562F80BE-D5BF-4F98-A582-6F9D9C4D7678}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -202,6 +204,7 @@ Global
 		{7CCE7D85-95C6-4CE8-A578-D392AB1CA714} = {BA2E38F3-A073-4D60-AE4C-B098FD87C997}
 		{EB2596D5-EBB5-48D7-A78E-F2C904761291} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E} = {A548F792-8343-446D-B21F-EE7C14E3472A}
+		{562F80BE-D5BF-4F98-A582-6F9D9C4D7678} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3E156F62-ED0C-4D02-893E-D04E5EB05F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -404,5 +407,9 @@ Global
 		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562F80BE-D5BF-4F98-A582-6F9D9C4D7678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562F80BE-D5BF-4F98-A582-6F9D9C4D7678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562F80BE-D5BF-4F98-A582-6F9D9C4D7678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562F80BE-D5BF-4F98-A582-6F9D9C4D7678}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
