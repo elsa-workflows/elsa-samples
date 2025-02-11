@@ -12,6 +12,7 @@ using Elsa.Studio.Shell.Extensions;
 using Elsa.Studio.WorkflowContexts.Extensions;
 using Elsa.Studio.Workflows.Designer.Extensions;
 using Elsa.Studio.Workflows.Extensions;
+using ElsaStudioBlazorWebAssemblyApp.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -25,7 +26,18 @@ builder.RootComponents.RegisterCustomElsaStudioElements();
 var backendApiConfig = new BackendApiConfig
 {
     ConfigureBackendOptions = options => configuration.GetSection("Backend").Bind(options),
-    ConfigureHttpClientBuilder = options => options.AuthenticationHandler = typeof(AuthenticatingApiHttpMessageHandler), 
+    ConfigureHttpClientBuilder = options =>
+    {
+        options.AuthenticationHandler = typeof(AuthenticatingApiHttpMessageHandler);
+        options.ConfigureHttpClient = (sp, httpClient) =>
+        {
+            var tenantIdAccessor = sp.GetRequiredService<TenantIdAccessor>();
+            var tenantId = tenantIdAccessor.GetTenantIdFromUrl();
+            
+            if (tenantId != null)
+                httpClient.DefaultRequestHeaders.Add("X-Company-Id", tenantId);
+        };
+    },
 };
 
 builder.Services.AddCore();
@@ -36,6 +48,7 @@ builder.Services.AddDashboardModule();
 builder.Services.AddWorkflowsModule();
 builder.Services.AddWorkflowContextsModule();
 builder.Services.AddScoped<ITimeZoneProvider, LocalTimeZoneProvider>();
+builder.Services.AddSingleton<TenantIdAccessor>();
 
 var app = builder.Build();
 var startupTaskRunner = app.Services.GetRequiredService<IStartupTaskRunner>();
