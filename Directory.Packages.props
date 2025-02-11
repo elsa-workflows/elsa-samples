@@ -4,16 +4,17 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Elsa.Studio" Version="$(ElsaStudioVersion)2" />
-    <PackageVersion Include="Elsa.Studio.Core" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.Core.BlazorServer" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.Login.BlazorServer" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.Core.BlazorWasm" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.Localization" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.Localization.BlazorWasm" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.Login.BlazorWasm" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.Webhooks" Version="$(ElsaStudioVersion)" />
-    <PackageVersion Include="Elsa.Studio.WorkflowContexts" Version="$(ElsaStudioVersion)" />
+    <PackageVersion Include="Elsa.Studio" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Core" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Core.BlazorServer" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Localization.BlazorServer" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Login.BlazorServer" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Core.BlazorWasm" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Localization" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Localization.BlazorWasm" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Login.BlazorWasm" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.Webhooks" Version="3.3.2" />
+    <PackageVersion Include="Elsa.Studio.WorkflowContexts" Version="3.3.2" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Elsa" Version="$(ElsaVersion)" />

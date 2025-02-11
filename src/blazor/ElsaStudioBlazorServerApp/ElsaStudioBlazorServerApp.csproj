@@ -4,6 +4,8 @@
         <PackageReference Include="Elsa.Studio"/>
         <PackageReference Include="Elsa.Studio.Core"/>
         <PackageReference Include="Elsa.Studio.Core.BlazorServer"/>
+        <PackageReference Include="Elsa.Studio.Localization" />
+        <PackageReference Include="Elsa.Studio.Localization.BlazorServer" />
         <PackageReference Include="Elsa.Studio.Login.BlazorServer"/>
         <PackageReference Include="Elsa.Studio.Webhooks"/>
         <PackageReference Include="Elsa.Studio.WorkflowContexts"/>
