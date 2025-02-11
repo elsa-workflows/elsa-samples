@@ -120,6 +120,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDropIn", "src\drop-ins\SampleDropIn\SampleDropIn.csproj", "{21BA87B6-C615-4335-96D5-BE99E15DE64C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "blazor", "blazor", "{A548F792-8343-446D-B21F-EE7C14E3472A}"
+	ProjectSection(SolutionItems) = preProject
+		src\blazor\Directory.Build.props = src\blazor\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorServerApp", "src\blazor\ElsaStudioBlazorServerApp\ElsaStudioBlazorServerApp.csproj", "{03E13DFD-5B6C-4915-934C-B7A1D1D3BC09}"
 EndProject
@@ -133,7 +136,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "compose", "compose", "{7CCE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioDesignerRehostedApp", "src\blazor\ElsaStudioDesignerRehostedApp\ElsaStudioDesignerRehostedApp.csproj", "{EB2596D5-EBB5-48D7-A78E-F2C904761291}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorWebAssemblyApp", "ElsaStudioBlazorWebAssemblyApp\ElsaStudioBlazorWebAssemblyApp.csproj", "{18742720-0563-436F-9684-7435F930945E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorWebAssemblyApp", "src\blazor\ElsaStudioBlazorWebAssemblyApp\ElsaStudioBlazorWebAssemblyApp.csproj", "{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -198,7 +201,7 @@ Global
 		{03E13DFD-5B6C-4915-934C-B7A1D1D3BC09} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 		{7CCE7D85-95C6-4CE8-A578-D392AB1CA714} = {BA2E38F3-A073-4D60-AE4C-B098FD87C997}
 		{EB2596D5-EBB5-48D7-A78E-F2C904761291} = {A548F792-8343-446D-B21F-EE7C14E3472A}
-		{18742720-0563-436F-9684-7435F930945E} = {A548F792-8343-446D-B21F-EE7C14E3472A}
+		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3E156F62-ED0C-4D02-893E-D04E5EB05F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -397,9 +400,9 @@ Global
 		{EB2596D5-EBB5-48D7-A78E-F2C904761291}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB2596D5-EBB5-48D7-A78E-F2C904761291}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB2596D5-EBB5-48D7-A78E-F2C904761291}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18742720-0563-436F-9684-7435F930945E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18742720-0563-436F-9684-7435F930945E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18742720-0563-436F-9684-7435F930945E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18742720-0563-436F-9684-7435F930945E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD6F27E-6108-4D69-A9F6-445DFF8CD59E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
