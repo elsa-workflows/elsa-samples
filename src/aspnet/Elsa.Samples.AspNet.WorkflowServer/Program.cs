@@ -1,3 +1,4 @@
+using Elsa.EntityFrameworkCore.Extensions;
 using Elsa.EntityFrameworkCore.Modules.Management;
 using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
@@ -8,11 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddElsa(elsa =>
 {
     // Configure management feature to use EF Core.
-    elsa.UseWorkflowManagement(management => management.UseEntityFrameworkCore());
+    elsa.UseWorkflowManagement(management => management.UseEntityFrameworkCore(ef => ef.UseSqlite()));
 
     elsa.UseWorkflowRuntime(runtime =>
     {
-        runtime.UseEntityFrameworkCore();
+        runtime.UseEntityFrameworkCore(ef => ef.UseSqlite());
     });
     
     // Expose API endpoints.
