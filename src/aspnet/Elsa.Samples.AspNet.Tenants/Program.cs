@@ -5,6 +5,7 @@ using Elsa.EntityFrameworkCore.Modules.Management;
 using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
 using Elsa.Identity.Multitenancy;
+using Elsa.Tenants.AspNetCore;
 using Elsa.Tenants.Extensions;
 using FastEndpoints.Swagger;
 
@@ -47,7 +48,9 @@ builder.Services.AddElsa(elsa =>
         tenantsFeature.ConfigureMultitenancy(options =>
         {
             multiTenancySection.Bind(options);
-            options.TenantResolverPipelineBuilder.Append<CurrentUserTenantResolver>();
+            options.TenantResolverPipelineBuilder
+                .Append<CurrentUserTenantResolver>()
+                .Append<HeaderTenantResolver>();
         });
         tenantsFeature.UseConfigurationBasedTenantsProvider(options => configuration.GetSection("Multitenancy").Bind(options));
     });
