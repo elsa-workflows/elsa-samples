@@ -16,7 +16,7 @@ builder.Services.AddElsa(elsa =>
         identity.UseAdminUserProvider();
         identity.TokenOptions = options =>
         {
-            options.SigningKey = "secret-token-signing-key";
+            options.SigningKey = "long-and-secret-token-signing-key";
             options.AccessTokenLifetime = TimeSpan.FromDays(1);
         };
     })
