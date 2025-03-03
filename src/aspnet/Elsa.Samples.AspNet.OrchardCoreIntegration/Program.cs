@@ -3,10 +3,10 @@ using Elsa.EntityFrameworkCore.Extensions;
 using Elsa.EntityFrameworkCore.Modules.Management;
 using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
-using Elsa.OrchardCore;
-using Elsa.OrchardCore.Client;
 using Elsa.Samples.AspNet.OrchardCoreIntegration;
 using Elsa.EntityFrameworkCore.Modules.Identity;
+using Elsa.Integrations.OrchardCore.Client.Options;
+using Elsa.Integrations.OrchardCore.Options;
 using Elsa.Workflows.Management;
 using WebhooksCore.Options;
 

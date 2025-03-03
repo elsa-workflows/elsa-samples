@@ -9,34 +9,30 @@ var services = builder.Services;
 
 // Add Elsa services.
 services.AddElsa(elsa => elsa
-    // Add the Fluent Storage workflow definition provider.
+    // Add the Fluent Storage workflow definition provider for reading workflows stored as JSON in the Workflows folder.
     .UseFluentStorageProvider()
-
-    // Expose API endpoints.
-    .UseWorkflowsApi()
-    
     .UseWorkflowManagement(management => management.UseEntityFrameworkCore(ef => ef.UseSqlite()))
     .UseWorkflowRuntime(runtime => runtime.UseEntityFrameworkCore(ef => ef.UseSqlite()))
+    .UseHttp()
+    .UseJavaScript()
+    .UseLiquid()
 
-    // Configure identity so that we can create a default admin user.
+    // Configure identity with a default admin user.
     .UseIdentity(identity =>
     {
         identity.UseAdminUserProvider();
         identity.UseEntityFrameworkCore(ef => ef.UseSqlite());
         identity.TokenOptions = options =>
         {
-            options.SigningKey = "secret-token-signing-key";
+            options.SigningKey = "very-long-secret-token-signing-key";
             options.AccessTokenLifetime = TimeSpan.FromDays(1);
         };
     })
-
-    // HTTP workflows.
-    .UseHttp()
-
-    // Use default authentication (JWT).
     .UseDefaultAuthentication(auth => auth.UseAdminApiKey())
 );
 
+services.AddControllers();
+services.AddHttpContextAccessor();
 services.AddCors(cors => cors.AddDefaultPolicy(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()));
 
 // Configure middleware pipeline.
@@ -46,9 +42,9 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 
 // Configure the HTTP request pipeline.
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors();
-app.UseWorkflowsApi();
-app.UseWorkflows();
+app.MapControllers();
 app.Run();

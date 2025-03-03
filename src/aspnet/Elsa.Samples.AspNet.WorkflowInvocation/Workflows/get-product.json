@@ -1,0 +1,114 @@
+{
+  "$schema": "https://elsaworkflows.io/schemas/workflow-definition/v3.0.0/schema.json",
+  "id": "e9811efe30f64be0",
+  "definitionId": "541514a08b106d5f",
+  "name": "Get Product",
+  "createdAt": "2025-03-03T15:36:36.381269\u002B00:00",
+  "version": 4,
+  "toolVersion": "3.3.0.0",
+  "variables": [],
+  "inputs": [
+    {
+      "uiHint": "singleline",
+      "storageDriverType": "Elsa.Workflows.WorkflowInstanceStorageDriver, Elsa.Workflows.Core",
+      "type": "Int32",
+      "name": "ProductId",
+      "displayName": "Product ID",
+      "description": "",
+      "category": "Primitives"
+    }
+  ],
+  "outputs": [
+    {
+      "type": "Object",
+      "name": "Product",
+      "displayName": "Product",
+      "description": "",
+      "category": "Primitives"
+    }
+  ],
+  "outcomes": [],
+  "customProperties": {},
+  "isReadonly": false,
+  "isSystem": false,
+  "isLatest": true,
+  "isPublished": true,
+  "options": {
+    "autoUpdateConsumingWorkflows": false
+  },
+  "root": {
+    "id": "2dd6a424f50e4754",
+    "nodeId": "Workflow1:2dd6a424f50e4754",
+    "name": "Flowchart1",
+    "type": "Elsa.Flowchart",
+    "version": 1,
+    "customProperties": {
+      "notFoundConnections": [],
+      "canStartWorkflow": false,
+      "runAsynchronously": false
+    },
+    "metadata": {},
+    "activities": [
+      {
+        "expectedStatusCodes": null,
+        "url": {
+          "typeName": "System.Uri, System.Private.Uri",
+          "expression": {
+            "type": "Liquid",
+            "value": "https://fakestoreapi.com/products/{{ Input.ProductId }}"
+          }
+        },
+        "method": {
+          "typeName": "String",
+          "expression": {
+            "type": "Literal",
+            "value": "GET"
+          }
+        },
+        "content": null,
+        "contentType": null,
+        "authorization": null,
+        "disableAuthorizationHeaderValidation": null,
+        "requestHeaders": {
+          "typeName": "HttpHeaders",
+          "expression": {
+            "type": "Literal",
+            "value": "{}"
+          }
+        },
+        "statusCode": null,
+        "parsedContent": {
+          "typeName": "Object",
+          "memoryReference": {
+            "id": "Product"
+          }
+        },
+        "responseHeaders": null,
+        "result": null,
+        "id": "c111e05285028b61",
+        "nodeId": "Workflow1:2dd6a424f50e4754:c111e05285028b61",
+        "name": "FlowSendHttpRequest1",
+        "type": "Elsa.FlowSendHttpRequest",
+        "version": 1,
+        "customProperties": {
+          "canStartWorkflow": false,
+          "runAsynchronously": false
+        },
+        "metadata": {
+          "designer": {
+            "position": {
+              "x": -320.796875,
+              "y": -94.5
+            },
+            "size": {
+              "width": 214.4375,
+              "height": 50
+            }
+          }
+        }
+      }
+    ],
+    "variables": [],
+    "connections": []
+  }
+}
