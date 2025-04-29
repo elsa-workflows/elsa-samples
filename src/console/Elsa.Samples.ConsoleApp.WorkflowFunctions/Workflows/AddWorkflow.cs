@@ -7,16 +7,10 @@ namespace Elsa.Samples.ConsoleApp.WorkflowFunctions.Workflows;
 /// <summary>
 /// A simple workflow that takes two numbers as build-time input and adds them together and returns the result as the workflow's result.
 /// </summary>
-public class AddWorkflow : WorkflowBase<float>
+public class AddWorkflow(float firstNumber, float secondNumber) : WorkflowBase<float>
 {
-    private readonly Variable<float> _firstNumber;
-    private readonly Variable<float> _secondNumber;
-
-    public AddWorkflow(float firstNumber, float secondNumber)
-    {
-        _firstNumber = new Variable<float>(firstNumber);
-        _secondNumber = new Variable<float>(secondNumber);
-    }
+    private readonly Variable<float> _firstNumber = new("firstNumber", firstNumber);
+    private readonly Variable<float> _secondNumber = new("secondNumber", secondNumber);
 
     protected override void Build(IWorkflowBuilder builder)
     {

@@ -8,7 +8,7 @@ public static class WhileWorkflow
 {
     public static IActivity Create()
     {
-        var counterVariable = new Variable<int>(1);
+        var counterVariable = new Variable<int>("Counter", 1);
 
         return new Sequence
         {
