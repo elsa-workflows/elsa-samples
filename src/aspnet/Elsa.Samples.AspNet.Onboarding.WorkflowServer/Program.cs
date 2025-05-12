@@ -13,12 +13,9 @@ builder.Services.AddElsa(elsa =>
     elsa.AddWorkflow<OnboardingWorkflow>();
 
     // Configure management feature to use EF Core.
-    elsa.UseWorkflowManagement(management => management.UseEntityFrameworkCore());
+    elsa.UseWorkflowManagement();
 
-    elsa.UseWorkflowRuntime(runtime =>
-    {
-        runtime.UseEntityFrameworkCore();
-    });
+    elsa.UseWorkflowRuntime();
 
     elsa.UseIdentity(identity =>
     {
