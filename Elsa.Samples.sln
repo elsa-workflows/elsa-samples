@@ -144,9 +144,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorServerWithT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.AspNet.WorkflowInvocation", "src\aspnet\Elsa.Samples.AspNet.WorkflowInvocation\Elsa.Samples.AspNet.WorkflowInvocation.csproj", "{0DDB7DF2-36A0-4590-8D00-9F33F4A1632C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorComponents", "blazor\ElsaStudioBlazorComponents\ElsaStudioBlazorComponents\ElsaStudioBlazorComponents.csproj", "{3A6B7E83-04B5-445D-AC4A-F4AF5D41A95E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioRehostedBlazorComponents", "src\blazor\ElsaStudioRehostedBlazorComponents\ElsaStudioRehostedBlazorComponents\ElsaStudioRehostedBlazorComponents.csproj", "{17A74FE4-99C7-4503-9310-106A27F590C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorComponents.Client", "blazor\ElsaStudioBlazorComponents\ElsaStudioBlazorComponents.Client\ElsaStudioBlazorComponents.Client.csproj", "{6AD4380C-6972-40C8-B303-0F28559B2151}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioRehostedBlazorComponents.Client", "src\blazor\ElsaStudioRehostedBlazorComponents\ElsaStudioRehostedBlazorComponents.Client\ElsaStudioRehostedBlazorComponents.Client.csproj", "{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -366,14 +366,14 @@ Global
 		{0DDB7DF2-36A0-4590-8D00-9F33F4A1632C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DDB7DF2-36A0-4590-8D00-9F33F4A1632C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DDB7DF2-36A0-4590-8D00-9F33F4A1632C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A6B7E83-04B5-445D-AC4A-F4AF5D41A95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A6B7E83-04B5-445D-AC4A-F4AF5D41A95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A6B7E83-04B5-445D-AC4A-F4AF5D41A95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A6B7E83-04B5-445D-AC4A-F4AF5D41A95E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6AD4380C-6972-40C8-B303-0F28559B2151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AD4380C-6972-40C8-B303-0F28559B2151}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AD4380C-6972-40C8-B303-0F28559B2151}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AD4380C-6972-40C8-B303-0F28559B2151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A74FE4-99C7-4503-9310-106A27F590C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A74FE4-99C7-4503-9310-106A27F590C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A74FE4-99C7-4503-9310-106A27F590C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A74FE4-99C7-4503-9310-106A27F590C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -437,7 +437,7 @@ Global
 		{562F80BE-D5BF-4F98-A582-6F9D9C4D7678} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 		{33952A1E-A1FE-49A5-A489-C4F3DEB31B46} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 		{0DDB7DF2-36A0-4590-8D00-9F33F4A1632C} = {8173ADD7-4526-40A5-BC04-50C02D59939C}
-		{3A6B7E83-04B5-445D-AC4A-F4AF5D41A95E} = {A548F792-8343-446D-B21F-EE7C14E3472A}
-		{6AD4380C-6972-40C8-B303-0F28559B2151} = {A548F792-8343-446D-B21F-EE7C14E3472A}
+		{17A74FE4-99C7-4503-9310-106A27F590C0} = {A548F792-8343-446D-B21F-EE7C14E3472A}
+		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 	EndGlobalSection
 EndGlobal
