@@ -6,10 +6,7 @@
 
 @code
 {
-    /// <summary>
-    /// An event that is invoked when a workflow definition is edited.
-    /// </summary>
-    [Inject] public NavigationManager NavigationManager { get; set; } = null!;
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
 
     private void OnEditWorkflowDefinition(string definitionId)
     {
