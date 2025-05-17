@@ -3,7 +3,7 @@ using Elsa.Studio.Core.BlazorWasm.Extensions;
 using Elsa.Studio.Extensions;
 using Elsa.Studio.Shell.Extensions;
 using Elsa.Studio.Workflows.Extensions;
-using ElsaStudioBlazorComponents.Services;
+using ElsaStudioRehostedBlazorComponents.Client.Services;
 using ElsaStudioRehostedBlazorComponents.Components;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

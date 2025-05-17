@@ -1,6 +1,6 @@
-﻿@page "/workflow/definitions"
+﻿@inherits LayoutComponentBase
+@layout MainLayout
 
-<PageTitle>Workflow Definitions</PageTitle>
 <HeadContent>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,13 +24,5 @@
 </SectionContent>
 
 <ThemedComponentWrapper>
-    <WorkflowDefinitionList EditWorkflowDefinition="@EditWorkflowDefinition"/>
+    @Body
 </ThemedComponentWrapper>
-
-@code
-{
-    /// <summary>
-    /// An event that is invoked when a workflow definition is edited.
-    /// </summary>
-    [Parameter] public EventCallback<string> EditWorkflowDefinition { get; set; }
-}

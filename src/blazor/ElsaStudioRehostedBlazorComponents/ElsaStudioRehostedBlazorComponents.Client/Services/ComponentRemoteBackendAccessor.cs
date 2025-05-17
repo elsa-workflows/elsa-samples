@@ -1,10 +1,9 @@
 using Elsa.Studio.Contracts;
 using Elsa.Studio.Models;
 using Elsa.Studio.Options;
-using Elsa.Studio.Services;
 using Microsoft.Extensions.Options;
 
-namespace ElsaStudioBlazorComponents.Services;
+namespace ElsaStudioRehostedBlazorComponents.Client.Services;
 
 /// <summary>
 /// A default implementation of <see cref="IRemoteBackendAccessor"/> that uses the <see cref="BackendOptions"/> to determine the URL of the remote backend.

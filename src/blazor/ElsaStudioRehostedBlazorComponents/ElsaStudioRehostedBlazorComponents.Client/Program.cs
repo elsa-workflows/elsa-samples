@@ -12,7 +12,7 @@ using Elsa.Studio.Options;
 using Elsa.Studio.Shell.Extensions;
 using Elsa.Studio.Workflows.Designer.Extensions;
 using Elsa.Studio.Workflows.Extensions;
-using ElsaStudioBlazorComponents.Services;
+using ElsaStudioRehostedBlazorComponents.Client.Services;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

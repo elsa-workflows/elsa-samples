@@ -1,0 +1,18 @@
+﻿@page "/workflow/definitions"
+@layout ElsaStudioLayout
+
+<PageTitle>Workflow Definitions</PageTitle>
+<WorkflowDefinitionList EditWorkflowDefinition="@OnEditWorkflowDefinition"/>
+
+@code
+{
+    /// <summary>
+    /// An event that is invoked when a workflow definition is edited.
+    /// </summary>
+    [Inject] public NavigationManager NavigationManager { get; set; } = null!;
+
+    private void OnEditWorkflowDefinition(string definitionId)
+    {
+        NavigationManager.NavigateTo($"/workflow/definitions/{definitionId}");
+    }
+}
