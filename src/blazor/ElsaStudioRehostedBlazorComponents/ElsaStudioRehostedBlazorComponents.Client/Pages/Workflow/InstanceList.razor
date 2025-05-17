@@ -1,0 +1,15 @@
+﻿@page "/workflow/instances"
+@layout ElsaStudioLayout
+
+<PageTitle>Workflow Instances</PageTitle>
+<WorkflowInstanceList ViewWorkflowInstance="@OnViewWorkflowInstance"/>
+
+@code
+{
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+
+    private void OnViewWorkflowInstance(string instanceId)
+    {
+        NavigationManager.NavigateTo($"/workflow/instances/{instanceId}");
+    }
+}

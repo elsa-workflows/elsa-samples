@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+    <PropertyGroup>
+        <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
+        <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Elsa.Studio.Core.BlazorWasm" />
+        <PackageReference Include="Elsa.Studio.Localization" />
+        <PackageReference Include="Elsa.Studio.Localization.BlazorWasm" />
+        <PackageReference Include="Elsa.Studio.Shell" />
+        <PackageReference Include="Elsa.Studio.Workflows" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\ElsaStudioRehostedBlazorComponents.Shared\ElsaStudioRehostedBlazorComponents.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

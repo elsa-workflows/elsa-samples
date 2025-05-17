@@ -13,9 +13,10 @@
     <PackageVersion Include="Elsa.Studio.Localization" Version="3.4.0-preview.857" />
     <PackageVersion Include="Elsa.Studio.Localization.BlazorWasm" Version="3.4.0-preview.857" />
     <PackageVersion Include="Elsa.Studio.Login.BlazorWasm" Version="3.4.0-preview.857" />
+    <PackageVersion Include="Elsa.Studio.Shell" Version="3.4.0-preview.857" />
     <PackageVersion Include="Elsa.Studio.Webhooks" Version="3.4.0-preview.857" />
+    <PackageVersion Include="Elsa.Studio.Workflows" Version="3.4.0-preview.857" />
     <PackageVersion Include="Elsa.Studio.WorkflowContexts" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Host.CustomElements" Version="3.4.0-preview.857" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Elsa" Version="3.4.0-preview.2685" />
