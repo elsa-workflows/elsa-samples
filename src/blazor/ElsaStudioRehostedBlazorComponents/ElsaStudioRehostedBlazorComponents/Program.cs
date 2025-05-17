@@ -1,5 +1,5 @@
+using ElsaStudioRehostedBlazorComponents.Client;
 using ElsaStudioRehostedBlazorComponents.Components;
-using ElsaStudioRehostedBlazorComponents.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;

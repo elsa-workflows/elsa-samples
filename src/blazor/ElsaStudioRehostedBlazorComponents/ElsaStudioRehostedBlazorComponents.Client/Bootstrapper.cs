@@ -11,12 +11,10 @@ using Elsa.Studio.Models;
 using Elsa.Studio.Options;
 using Elsa.Studio.Shell.Extensions;
 using Elsa.Studio.Workflows.Extensions;
-using ElsaStudioRehostedBlazorComponents.Shared.Services;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using ElsaStudioRehostedBlazorComponents.Client.Services;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace ElsaStudioRehostedBlazorComponents.Shared;
+namespace ElsaStudioRehostedBlazorComponents.Client;
 
 public class Bootstrapper(IConfiguration configuration, IServiceCollection services)
 {

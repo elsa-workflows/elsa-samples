@@ -14,8 +14,4 @@
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\ElsaStudioRehostedBlazorComponents.Shared\ElsaStudioRehostedBlazorComponents.Shared.csproj" />
-    </ItemGroup>
-
 </Project>

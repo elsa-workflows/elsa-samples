@@ -1,9 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-    <ItemGroup>
-        <PackageReference Include="Elsa.Studio.Core.BlazorWasm" />
-        <PackageReference Include="Elsa.Studio.Localization" />
-        <PackageReference Include="Elsa.Studio.Localization.BlazorWasm" />
-        <PackageReference Include="Elsa.Studio.Shell" />
-        <PackageReference Include="Elsa.Studio.Workflows" />
-    </ItemGroup>
-</Project>

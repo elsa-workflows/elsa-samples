@@ -1,5 +1,5 @@
 using Elsa.Studio.Workflows.Designer.Extensions;
-using ElsaStudioRehostedBlazorComponents.Shared;
+using ElsaStudioRehostedBlazorComponents.Client;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
