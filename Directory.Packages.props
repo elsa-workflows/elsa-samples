@@ -1,88 +1,88 @@
 <Project>
-  <PropertyGroup>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageVersion Include="Elsa.Studio" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Core" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Core.BlazorServer" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Localization.BlazorServer" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Login.BlazorServer" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Core.BlazorWasm" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Localization" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Localization.BlazorWasm" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Login.BlazorWasm" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Shell" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Webhooks" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.Workflows" Version="3.4.0-preview.857" />
-    <PackageVersion Include="Elsa.Studio.WorkflowContexts" Version="3.4.0-preview.857" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageVersion Include="Elsa" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Integrations.Agents.Activities" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.Agents.Api" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.Agents.Core" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.Agents.Models" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.Agents.Persistence" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.Agents.Persistence.EntityFrameworkCore" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.Agents.Persistence.EntityFrameworkCore.Sqlite" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.AzureServiceBus" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.OrchardCore" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Integrations.Telnyx" Version="3.4.0-preview.12" />
-    <PackageVersion Include="Elsa.Api.Client" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.CSharp" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Dapper" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.DropIns" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.DropIns.Core" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Elasticsearch" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Email" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.EntityFrameworkCore" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.EntityFrameworkCore.Sqlite" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.EntityFrameworkCore.PostgreSql" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Hangfire" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Http" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Identity" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.JavaScript" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.JavaScript.Libraries" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Scheduling" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Liquid" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.MassTransit" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.MassTransit.AzureServiceBus" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.MassTransit.RabbitMq" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.MongoDb" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.SasTokens" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Tenants" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Tenants.AspNetCore" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Testing.Shared.Integration" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Webhooks" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.WorkflowContexts" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.WorkflowProviders.BlobStorage" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Workflows.Api" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Workflows.Runtime" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Workflows.Runtime.Distributed" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Workflows.Runtime.ProtoActor" Version="3.4.0-preview.2685" />
-    <PackageVersion Include="Elsa.Quartz" Version="3.4.0-preview.2685" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageVersion Include="JetBrains.Annotations" Version="2024.3.0" />
-    <PackageVersion Include="System.Net.Http" Version="4.3.4" />
-    <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
-    <PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="4.13.0" />
-    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.13.0" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.2" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.2" PrivateAssets="all" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.2"/>
-    <PackageVersion Include="Microsoft.JSInterop" Version="9.0.2" />
-    <PackageVersion Include="AutoMapper" Version="13.0.1" />
-    <PackageVersion Include="Azure.Identity" Version="1.13.2" />
-    <PackageVersion Include="Azure.ResourceManager" Version="1.13.0" />
-    <PackageVersion Include="Bogus" Version="35.6.2" />
-    <PackageVersion Include="Proto.Cluster.AzureContainerApps" Version="1.7.0" />
-    <PackageVersion Include="Proto.Persistence.Sqlite" Version="1.7.0" />
-  </ItemGroup>
+	<PropertyGroup>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+		<CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageVersion Include="Elsa.Studio" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Core" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Core.BlazorServer" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Localization.BlazorServer" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Login.BlazorServer" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Core.BlazorWasm" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Localization" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Localization.BlazorWasm" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Login.BlazorWasm" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Shell" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Webhooks" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.Workflows" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Studio.WorkflowContexts" Version="3.4.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageVersion Include="Elsa" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Integrations.Agents.Activities" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.Agents.Api" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.Agents.Core" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.Agents.Models" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.Agents.Persistence" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.Agents.Persistence.EntityFrameworkCore" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.Agents.Persistence.EntityFrameworkCore.Sqlite" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.AzureServiceBus" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.OrchardCore" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Integrations.Telnyx" Version="3.4.0-3.4.0.23" />
+		<PackageVersion Include="Elsa.Api.Client" Version="3.4.0" />
+		<PackageVersion Include="Elsa.CSharp" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Dapper" Version="3.4.0" />
+		<PackageVersion Include="Elsa.DropIns" Version="3.4.0" />
+		<PackageVersion Include="Elsa.DropIns.Core" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Elasticsearch" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Email" Version="3.4.0" />
+		<PackageVersion Include="Elsa.EntityFrameworkCore" Version="3.4.0" />
+		<PackageVersion Include="Elsa.EntityFrameworkCore.Sqlite" Version="3.4.0" />
+		<PackageVersion Include="Elsa.EntityFrameworkCore.PostgreSql" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Hangfire" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Http" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Identity" Version="3.4.0" />
+		<PackageVersion Include="Elsa.JavaScript" Version="3.4.0" />
+		<PackageVersion Include="Elsa.JavaScript.Libraries" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Scheduling" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Liquid" Version="3.4.0" />
+		<PackageVersion Include="Elsa.MassTransit" Version="3.4.0" />
+		<PackageVersion Include="Elsa.MassTransit.AzureServiceBus" Version="3.4.0" />
+		<PackageVersion Include="Elsa.MassTransit.RabbitMq" Version="3.4.0" />
+		<PackageVersion Include="Elsa.MongoDb" Version="3.4.0" />
+		<PackageVersion Include="Elsa.SasTokens" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Tenants" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Tenants.AspNetCore" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Testing.Shared.Integration" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Webhooks" Version="3.4.0" />
+		<PackageVersion Include="Elsa.WorkflowContexts" Version="3.4.0" />
+		<PackageVersion Include="Elsa.WorkflowProviders.BlobStorage" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Workflows.Api" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Workflows.Runtime" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Workflows.Runtime.Distributed" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Workflows.Runtime.ProtoActor" Version="3.4.0" />
+		<PackageVersion Include="Elsa.Quartz" Version="3.4.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageVersion Include="JetBrains.Annotations" Version="2024.3.0" />
+		<PackageVersion Include="System.Net.Http" Version="4.3.4" />
+		<PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
+		<PackageVersion Include="Microsoft.CodeAnalysis.Common" Version="4.13.0" />
+		<PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.13.0" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.3" />
+		<PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
+		<PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.3" />
+		<PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.3" PrivateAssets="all" />
+		<PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.3" />
+		<PackageVersion Include="Microsoft.JSInterop" Version="9.0.3" />
+		<PackageVersion Include="AutoMapper" Version="13.0.1" />
+		<PackageVersion Include="Azure.Identity" Version="1.13.2" />
+		<PackageVersion Include="Azure.ResourceManager" Version="1.13.0" />
+		<PackageVersion Include="Bogus" Version="35.6.2" />
+		<PackageVersion Include="Proto.Cluster.AzureContainerApps" Version="1.7.0" />
+		<PackageVersion Include="Proto.Persistence.Sqlite" Version="1.7.0" />
+	</ItemGroup>
 </Project>
