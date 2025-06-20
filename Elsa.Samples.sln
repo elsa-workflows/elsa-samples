@@ -148,6 +148,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioRehostedBlazorCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioRehostedBlazorComponents.Client", "src\blazor\ElsaStudioRehostedBlazorComponents\ElsaStudioRehostedBlazorComponents.Client\ElsaStudioRehostedBlazorComponents.Client.csproj", "{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Samples.AspNet.Agents", "src\aspnet\Elsa.Samples.AspNet.Agents\Elsa.Samples.AspNet.Agents.csproj", "{2D45DFA5-85DF-4406-9B94-F778C6C41D68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -374,6 +376,10 @@ Global
 		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D45DFA5-85DF-4406-9B94-F778C6C41D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D45DFA5-85DF-4406-9B94-F778C6C41D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D45DFA5-85DF-4406-9B94-F778C6C41D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D45DFA5-85DF-4406-9B94-F778C6C41D68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -439,5 +445,6 @@ Global
 		{0DDB7DF2-36A0-4590-8D00-9F33F4A1632C} = {8173ADD7-4526-40A5-BC04-50C02D59939C}
 		{17A74FE4-99C7-4503-9310-106A27F590C0} = {A548F792-8343-446D-B21F-EE7C14E3472A}
 		{4ECAF222-9CC8-412E-AFB0-8F314C4CD19B} = {A548F792-8343-446D-B21F-EE7C14E3472A}
+		{2D45DFA5-85DF-4406-9B94-F778C6C41D68} = {8173ADD7-4526-40A5-BC04-50C02D59939C}
 	EndGlobalSection
 EndGlobal
