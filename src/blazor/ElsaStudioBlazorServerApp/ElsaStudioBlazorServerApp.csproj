@@ -2,6 +2,7 @@
 
     <ItemGroup>
         <PackageReference Include="Elsa.Studio"/>
+        <PackageReference Include="Elsa.Studio.Agents" />
         <PackageReference Include="Elsa.Studio.Core"/>
         <PackageReference Include="Elsa.Studio.Core.BlazorServer"/>
         <PackageReference Include="Elsa.Studio.Localization" />

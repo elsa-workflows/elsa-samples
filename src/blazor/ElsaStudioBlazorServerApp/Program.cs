@@ -4,12 +4,14 @@ using Elsa.Studio.Extensions;
 using Elsa.Studio.Localization.Time;
 using Elsa.Studio.Localization.Time.Providers;
 using Elsa.Studio.Login.BlazorServer.Extensions;
+using Elsa.Studio.Login.Extensions;
 using Elsa.Studio.Login.HttpMessageHandlers;
 using Elsa.Studio.Models;
 using Elsa.Studio.Shell;
 using Elsa.Studio.Shell.Extensions;
 using Elsa.Studio.Webhooks.Extensions;
 using Elsa.Studio.WorkflowContexts.Extensions;
+using Elsa.Studio.Workflows.Designer.Extensions;
 using Elsa.Studio.Workflows.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,15 +25,20 @@ var backendApiConfig = new BackendApiConfig
 };
 
 services.AddRazorPages();
-services.AddRazorComponents().AddInteractiveServerComponents();
+services.AddRazorComponents().AddInteractiveServerComponents(options =>
+{
+    options.RootComponents.RegisterCustomElsaStudioElements();
+    options.RootComponents.MaxJSRootComponents = 1000;
+});
 services.AddCore();
 services.AddShell(options => configuration.GetSection("Shell").Bind(options));
 services.AddRemoteBackend(backendApiConfig);
-services.AddLoginModule();
+services.AddLoginModule().UseElsaIdentity();
 services.AddDashboardModule();
 services.AddWorkflowsModule();
 services.AddWorkflowContextsModule();
 services.AddWebhooksModule();
+services.AddAgentsModule(backendApiConfig);
 builder.Services.AddScoped<ITimeZoneProvider, LocalTimeZoneProvider>();
 
 var app = builder.Build();

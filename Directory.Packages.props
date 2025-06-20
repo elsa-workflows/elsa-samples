@@ -11,6 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Elsa.Studio" Version="$(ElsaStudioVersion)" />
+    <PackageVersion Include="Elsa.Studio.Agents" Version="3.4.0" />
     <PackageVersion Include="Elsa.Studio.Core" Version="$(ElsaStudioVersion)" />
     <PackageVersion Include="Elsa.Studio.Core.BlazorServer" Version="$(ElsaStudioVersion)" />
     <PackageVersion Include="Elsa.Studio.Localization.BlazorServer" Version="$(ElsaStudioVersion)" />
@@ -82,7 +83,7 @@
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(MicrosoftVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(MicrosoftVersion)" PrivateAssets="all" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="$(MicrosoftVersion)"/>
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="$(MicrosoftVersion)" />
     <PackageVersion Include="Microsoft.JSInterop" Version="$(MicrosoftVersion)" />
     <PackageVersion Include="AutoMapper" Version="14.0.0" />
     <PackageVersion Include="Azure.Identity" Version="1.14.0" />
