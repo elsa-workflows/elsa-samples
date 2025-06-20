@@ -120,9 +120,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDropIn", "src\drop-ins\SampleDropIn\SampleDropIn.csproj", "{21BA87B6-C615-4335-96D5-BE99E15DE64C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "blazor", "blazor", "{A548F792-8343-446D-B21F-EE7C14E3472A}"
-	ProjectSection(SolutionItems) = preProject
-		src\blazor\Directory.Build.props = src\blazor\Directory.Build.props
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElsaStudioBlazorServerApp", "src\blazor\ElsaStudioBlazorServerApp\ElsaStudioBlazorServerApp.csproj", "{03E13DFD-5B6C-4915-934C-B7A1D1D3BC09}"
 EndProject

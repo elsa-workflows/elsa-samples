@@ -41,6 +41,7 @@ builder.Services.AddElsa(elsa =>
             identity.UseConfigurationBasedApplicationProvider(options => identitySection.Bind(options));
             identity.UseConfigurationBasedRoleProvider(options => identitySection.Bind(options));
         })
+        .UseScheduling()
         .UseDefaultAuthentication();
 
     elsa.UseTenants(tenantsFeature =>
