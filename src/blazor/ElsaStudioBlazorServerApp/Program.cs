@@ -33,7 +33,20 @@ services.AddRazorComponents().AddInteractiveServerComponents(options =>
 services.AddCore();
 services.AddShell(options => configuration.GetSection("Shell").Bind(options));
 services.AddRemoteBackend(backendApiConfig);
-services.AddLoginModule().UseElsaIdentity();
+services.AddLoginModule();
+
+var identityProvider = configuration.GetValue<string>("Identity:Provider");
+
+switch (identityProvider)
+{
+    case "Elsa":
+        services.UseElsaIdentity();
+        break;
+    case "OAuth2":
+        services.UseOAuth2(options => configuration.GetSection("Identity:OAuth2").Bind(options));
+        break;
+}
+
 services.AddDashboardModule();
 services.AddWorkflowsModule();
 services.AddWorkflowContextsModule();

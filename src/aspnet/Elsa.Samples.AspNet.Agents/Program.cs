@@ -20,6 +20,8 @@ builder.Services.AddElsa(elsa =>
     });
 
     elsa.UseDefaultAuthentication(auth => auth.UseAdminApiKey());
+    elsa.UseJavaScript();
+    elsa.UseLiquid();
     elsa.AddActivitiesFrom<Program>();
     elsa.AddWorkflowsFrom<Program>();
 
