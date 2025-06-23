@@ -8,10 +8,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddElsa(elsa =>
 {
-    elsa.UseWorkflowManagement(management => management.UseEntityFrameworkCore(ef => ef.UseSqlite()));
-    elsa.UseWorkflowRuntime(runtime => runtime.UseEntityFrameworkCore(ef => ef.UseSqlite()));
+    elsa.UseWorkflowManagement(management =>
+    {
+        management.UseEntityFrameworkCore(ef => ef.UseSqlite());
+        management.UseCache();
+    });
+    elsa.UseWorkflowRuntime(runtime =>
+    {
+        runtime.UseEntityFrameworkCore(ef => ef.UseSqlite());
+        runtime.UseCache();
+    });
     elsa.UseWorkflowsApi();
-    elsa.UseHttp();
+    elsa.UseHttp(http =>
+    {
+        http.ConfigureHttpOptions = options => builder.Configuration.GetSection("Http").Bind(options);
+        http.UseCache();
+    });
     elsa.UseScheduling();
     elsa.UseIdentity(identity =>
     {
@@ -22,6 +34,7 @@ builder.Services.AddElsa(elsa =>
     elsa.UseDefaultAuthentication(auth => auth.UseAdminApiKey());
     elsa.UseJavaScript();
     elsa.UseLiquid();
+    elsa.UseWorkflowContexts();
     elsa.AddActivitiesFrom<Program>();
     elsa.AddWorkflowsFrom<Program>();
 
