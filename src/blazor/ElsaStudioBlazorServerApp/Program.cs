@@ -35,7 +35,7 @@ services.AddShell(options => configuration.GetSection("Shell").Bind(options));
 services.AddRemoteBackend(backendApiConfig);
 services.AddLoginModule();
 
-var identityProvider = configuration.GetValue<string>("Identity:Provider");
+var identityProvider = configuration.GetValue<string>("Provider");
 
 switch (identityProvider)
 {
@@ -43,7 +43,7 @@ switch (identityProvider)
         services.UseElsaIdentity();
         break;
     case "OAuth2":
-        services.UseOAuth2(options => configuration.GetSection("Identity:OAuth2").Bind(options));
+        services.UseOAuth2(options => configuration.GetSection("Providers:OAuth2").Bind(options));
         break;
 }
 

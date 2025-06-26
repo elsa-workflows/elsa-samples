@@ -5,7 +5,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <ElsaVersion>3.5.0-preview.3089</ElsaVersion>
-    <ElsaStudioVersion>3.5.0-preview.1112</ElsaStudioVersion>
+    <ElsaStudioVersion>3.5.0-preview.1116</ElsaStudioVersion>
     <ElsaExtensionsVersion>3.5.0-preview.68</ElsaExtensionsVersion>
     <MicrosoftVersion>9.0.6</MicrosoftVersion>
   </PropertyGroup>
@@ -27,17 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Elsa" Version="$(ElsaVersion)" />
-    <PackageVersion Include="Elsa.Agents.Activities" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Agents.Api" Version="3.5.0-preview.67" />
-    <PackageVersion Include="Elsa.Agents.Core" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Agents.Models" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Agents.Persistence" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Agents.Persistence.EFCore" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Agents.Persistence.EFCore.Sqlite" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.AzureServiceBus" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.OrchardCore" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Telnyx" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Api.Client" Version="3.5.0-preview.3089" />
+    <PackageVersion Include="Elsa.Api.Client" Version="$(ElsaVersion)" />
     <PackageVersion Include="Elsa.CSharp" Version="$(ElsaVersion)" />
     <PackageVersion Include="Elsa.Dapper" Version="$(ElsaVersion)" />
     <PackageVersion Include="Elsa.DropIns" Version="$(ElsaVersion)" />
@@ -70,6 +60,18 @@
     <PackageVersion Include="Elsa.Workflows.Runtime.Distributed" Version="$(ElsaVersion)" />
     <PackageVersion Include="Elsa.Workflows.Runtime.ProtoActor" Version="$(ElsaVersion)" />
     <PackageVersion Include="Elsa.Quartz" Version="$(ElsaVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Elsa.Agents.Activities" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Agents.Api" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Agents.Core" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Agents.Models" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Agents.Persistence" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Agents.Persistence.EFCore" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Agents.Persistence.EFCore.Sqlite" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.AzureServiceBus" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.OrchardCore" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Telnyx" Version="$(ElsaExtensionsVersion)" />
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="JetBrains.Annotations" Version="2024.3.0" />
