@@ -1,0 +1,10 @@
+﻿@page "/workflow/definitions/{WorkflowDefinitionId}"
+@layout ElsaStudioLayout
+
+<PageTitle>Workflow Definition Editor</PageTitle>
+<WorkflowDefinitionEditor DefinitionId="@WorkflowDefinitionId" />
+
+@code
+{
+    [Parameter] public string WorkflowDefinitionId { get; set; } = null!;
+}
