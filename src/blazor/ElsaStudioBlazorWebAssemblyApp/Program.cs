@@ -5,6 +5,7 @@ using Elsa.Studio.Extensions;
 using Elsa.Studio.Localization.Time;
 using Elsa.Studio.Localization.Time.Providers;
 using Elsa.Studio.Login.BlazorWasm.Extensions;
+using Elsa.Studio.Login.Extensions;
 using Elsa.Studio.Login.HttpMessageHandlers;
 using Elsa.Studio.Models;
 using Elsa.Studio.Shell;
@@ -43,7 +44,7 @@ var backendApiConfig = new BackendApiConfig
 builder.Services.AddCore();
 builder.Services.AddShell();
 builder.Services.AddRemoteBackend(backendApiConfig);
-builder.Services.AddLoginModule();
+builder.Services.AddLoginModule().UseElsaIdentity();
 builder.Services.AddDashboardModule();
 builder.Services.AddWorkflowsModule();
 builder.Services.AddWorkflowContextsModule();
