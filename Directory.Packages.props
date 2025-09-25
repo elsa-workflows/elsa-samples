@@ -4,10 +4,10 @@
     <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <PropertyGroup>
-    <ElsaVersion>3.5.0-rc2</ElsaVersion>
-    <ElsaStudioVersion>3.5.0-rc3</ElsaStudioVersion>
-    <ElsaExtensionsVersion>3.5.0-rc2</ElsaExtensionsVersion>
-    <MicrosoftVersion>9.0.6</MicrosoftVersion>
+    <ElsaVersion>3.5.0</ElsaVersion>
+    <ElsaStudioVersion>3.5.0</ElsaStudioVersion>
+    <ElsaExtensionsVersion>3.5.0</ElsaExtensionsVersion>
+    <MicrosoftVersion>9.0.9</MicrosoftVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Elsa.Studio" Version="$(ElsaStudioVersion)" />
