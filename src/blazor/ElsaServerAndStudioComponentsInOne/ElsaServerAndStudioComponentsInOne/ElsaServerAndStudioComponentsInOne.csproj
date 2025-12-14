@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <ItemGroup>
+        <PackageReference Include="Elsa"/>
+        <PackageReference Include="Elsa.EntityFrameworkCore"/>
+        <PackageReference Include="Elsa.EntityFrameworkCore.Sqlite"/>
+        <PackageReference Include="Elsa.Workflows.Api"/>
+        <PackageReference Include="Elsa.Http"/>
+        <PackageReference Include="Elsa.Scheduling"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ElsaServerAndStudioComponentsInOne.Client\ElsaServerAndStudioComponentsInOne.Client.csproj"/>
+    </ItemGroup>
+
+</Project>

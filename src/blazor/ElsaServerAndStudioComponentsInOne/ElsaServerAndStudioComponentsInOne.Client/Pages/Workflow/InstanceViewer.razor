@@ -1,0 +1,10 @@
+﻿@page "/workflow/instances/{WorkflowInstanceId}"
+@layout ElsaStudioLayout
+
+<PageTitle>Workflow Instance Viewer</PageTitle>
+<WorkflowInstanceViewer InstanceId="@WorkflowInstanceId" />
+
+@code
+{
+    [Parameter] public string WorkflowInstanceId { get; set; } = null!;
+}

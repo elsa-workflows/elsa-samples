@@ -14,8 +14,8 @@ public class AddWorkflow : WorkflowBase<float>
 
     public AddWorkflow(float firstNumber, float secondNumber)
     {
-        _firstNumber = new Variable<float>(firstNumber);
-        _secondNumber = new Variable<float>(secondNumber);
+        _firstNumber = new("first", firstNumber);
+        _secondNumber = new("second", secondNumber);
     }
 
     protected override void Build(IWorkflowBuilder builder)
