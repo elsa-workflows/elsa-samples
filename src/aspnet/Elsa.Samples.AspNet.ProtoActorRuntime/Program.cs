@@ -1,8 +1,8 @@
-using Elsa.EntityFrameworkCore.Extensions;
-using Elsa.EntityFrameworkCore.Modules.Labels;
-using Elsa.EntityFrameworkCore.Modules.Management;
-using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
+using Elsa.Persistence.EFCore.Extensions;
+using Elsa.Persistence.EFCore.Modules.Labels;
+using Elsa.Persistence.EFCore.Modules.Management;
+using Elsa.Persistence.EFCore.Modules.Runtime;
 using Microsoft.Data.Sqlite;
 using Proto.Persistence.Sqlite;
 
@@ -33,7 +33,7 @@ services
         // Use Proto.Actor.
         .UseProtoActor(protoActor =>
         {
-            protoActor.PersistenceProvider = _ => new SqliteProvider(new SqliteConnectionStringBuilder(sqliteConnectionString));
+            protoActor.PersistenceProvider = _ => new SqliteProvider(new(sqliteConnectionString));
         })
         .UseWorkflowRuntime(runtime =>
         {

@@ -1,7 +1,7 @@
 <Project>
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))"/>
     <PropertyGroup Label="TargetFrameworks">
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="JetBrains.Annotations"/>
@@ -21,41 +21,41 @@
         <PackageReference Include="Elsa.Agents.Persistence"/>
         <PackageReference Include="Elsa.Agents.Persistence.EFCore"/>
         <PackageReference Include="Elsa.Agents.Persistence.EFCore.Sqlite"/>
-        <PackageReference Include="Elsa.AzureServiceBus"/>
+        <PackageReference Include="Elsa.ServiceBus.AzureServiceBus"/>
         <PackageReference Include="Elsa.OrchardCore"/>
         <PackageReference Include="Elsa.Telnyx"/>
-        <PackageReference Include="Elsa.CSharp"/>
-        <PackageReference Include="Elsa.Dapper"/>
+        <PackageReference Include="Elsa.Expressions.CSharp"/>
+        <PackageReference Include="Elsa.Persistence.Dapper"/>
+        <PackageReference Include="Elsa.Persistence.MongoDb"/>
         <PackageReference Include="Elsa.DropIns"/>
         <PackageReference Include="Elsa.DropIns.Core"/>
-        <PackageReference Include="Elsa.Elasticsearch"/>
+        <PackageReference Include="Elsa.Persistence.Elasticsearch"/>
         <PackageReference Include="Elsa.Email"/>
-        <PackageReference Include="Elsa.EntityFrameworkCore"/>
-        <PackageReference Include="Elsa.EntityFrameworkCore.PostgreSql"/>
-        <PackageReference Include="Elsa.EntityFrameworkCore.Sqlite"/>
-        <PackageReference Include="Elsa.Hangfire"/>
+        <PackageReference Include="Elsa.Persistence.EFCore"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.PostgreSql"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.Sqlite"/>
+        <PackageReference Include="Elsa.Scheduling.Hangfire"/>
         <PackageReference Include="Elsa.Http"/>
         <PackageReference Include="Elsa.Identity"/>
-        <PackageReference Include="Elsa.JavaScript"/>
-        <PackageReference Include="Elsa.JavaScript.Libraries"/>
+        <PackageReference Include="Elsa.Expressions.JavaScript"/>
+        <PackageReference Include="Elsa.Expressions.JavaScript.Libraries"/>
         <PackageReference Include="Elsa.Scheduling"/>
-        <PackageReference Include="Elsa.Liquid"/>
-        <PackageReference Include="Elsa.MassTransit"/>
-        <PackageReference Include="Elsa.MassTransit.AzureServiceBus"/>
-        <PackageReference Include="Elsa.MassTransit.RabbitMq"/>
-        <PackageReference Include="Elsa.MongoDb"/>
+        <PackageReference Include="Elsa.Expressions.Liquid"/>
+        <PackageReference Include="Elsa.ServiceBus.MassTransit"/>
+        <PackageReference Include="Elsa.ServiceBus.MassTransit.AzureServiceBus"/>
+        <PackageReference Include="Elsa.ServiceBus.MassTransit.RabbitMq"/>
         <PackageReference Include="Elsa.SasTokens"/>
         <PackageReference Include="Elsa.Tenants"/>
         <PackageReference Include="Elsa.Tenants.AspNetCore"/>
         <PackageReference Include="Elsa.Testing.Shared.Integration"/>
-        <PackageReference Include="Elsa.Webhooks"/>
+        <PackageReference Include="Elsa.Http.Webhooks"/>
         <PackageReference Include="Elsa.WorkflowContexts"/>
         <PackageReference Include="Elsa.WorkflowProviders.BlobStorage"/>
         <PackageReference Include="Elsa.Workflows.Api"/>
         <PackageReference Include="Elsa.Workflows.Runtime"/>
         <PackageReference Include="Elsa.Workflows.Runtime.Distributed"/>
         <PackageReference Include="Elsa.Workflows.Runtime.ProtoActor"/>
-        <PackageReference Include="Elsa.Quartz"/>
+        <PackageReference Include="Elsa.Scheduling.Quartz"/>
     </ItemGroup>
 
     <ItemGroup>

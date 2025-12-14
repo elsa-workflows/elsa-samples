@@ -1,9 +1,10 @@
+using Elsa.Expressions.JavaScript.Activities;
 using Elsa.Extensions;
 using Elsa.Identity;
 using Elsa.Identity.Options;
-using Elsa.JavaScript.Activities;
-using Elsa.EntityFrameworkCore.Modules.Management;
-using Elsa.EntityFrameworkCore.Modules.Runtime;
+using Elsa.Persistence.EFCore.Extensions;
+using Elsa.Persistence.EFCore.Modules.Management;
+using Elsa.Persistence.EFCore.Modules.Runtime;
 using Elsa.Requirements;
 using Elsa.Workflows.Activities;
 using Elsa.Workflows.Activities.Flowchart.Activities;
@@ -26,8 +27,8 @@ services
         .UseWorkflowManagement(management =>
         {
             management
-                .UseWorkflowDefinitions(dm => dm.UseEntityFrameworkCore())
-                .UseWorkflowInstances(w => w.UseEntityFrameworkCore())
+                .UseWorkflowDefinitions(dm => dm.UseEntityFrameworkCore(ef => ef.UseSqlite()))
+                .UseWorkflowInstances(w => w.UseEntityFrameworkCore(ef => ef.UseSqlite()))
                 .AddActivity<WriteLine>()
                 .AddActivity<ReadLine>()
                 .AddActivity<If>()

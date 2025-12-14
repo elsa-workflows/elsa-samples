@@ -107,7 +107,7 @@ public class ApiActivityProvider : IActivityProvider
         // Create an output descriptor based on the send HTTP request activity's ParsedContent property.
         var outputDescriptor = await _activityDescriber.DescribeOutputProperty<SendHttpRequest, Output<object?>>(x => x.ParsedContent, cancellationToken);
 
-        return new ActivityDescriptor
+        return new()
         {
             Kind = ActivityKind.Task,
             Category = "Demo",
@@ -117,19 +117,19 @@ public class ApiActivityProvider : IActivityProvider
             Namespace = $"Api.{api.Name}",
             DisplayName = endpoint.Name.Humanize(),
             Inputs = inputs,
-            Outputs = new[] { outputDescriptor },
+            Outputs = [outputDescriptor],
             Constructor = context =>
             {
                 // The constructor is called when an activity instance of this type is requested.
                 
                 // Create the activity instance.
-                var activity = _activityFactory.Create<SendHttpRequest>(context);
+                var activity = context.CreateActivity<SendHttpRequest>();
                 
                 // Customize the activity type name.
                 activity.Type = fullTypeName;
                 
                 // Configure the activity's URL and method properties.
-                activity.Url = new Input<Uri?>(new MemoryBlockReference(urlInputReferenceId));
+                activity.Url = new(new MemoryBlockReference(urlInputReferenceId));
                 activity.Method = new(new MemoryBlockReference(methodInputReferenceId));
 
                 return activity;

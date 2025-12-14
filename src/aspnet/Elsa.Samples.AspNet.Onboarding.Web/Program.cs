@@ -1,5 +1,5 @@
 using System.Net.Http.Headers;
-using Elsa.EntityFrameworkCore;
+using Elsa.Persistence.EFCore;
 using Elsa.Samples.AspNet.Onboarding.Web.Data;
 using Elsa.Samples.AspNet.Onboarding.Web.Services;
 using Microsoft.EntityFrameworkCore;
@@ -18,8 +18,8 @@ services.AddHttpClient<ElsaClient>(httpClient =>
 {
     var url = configuration["Elsa:ServerUrl"]!.TrimEnd('/') + '/';
     var apiKey = configuration["Elsa:ApiKey"]!;
-    httpClient.BaseAddress = new Uri(url);
-    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("ApiKey", apiKey);
+    httpClient.BaseAddress = new(url);
+    httpClient.DefaultRequestHeaders.Authorization = new("ApiKey", apiKey);
 });
 
 var app = builder.Build();

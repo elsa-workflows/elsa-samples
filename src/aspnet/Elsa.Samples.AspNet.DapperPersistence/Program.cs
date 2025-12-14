@@ -1,5 +1,5 @@
-using Elsa.Dapper.Extensions;
 using Elsa.Extensions;
+using Elsa.Persistence.Dapper.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

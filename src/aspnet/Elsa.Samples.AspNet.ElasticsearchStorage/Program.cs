@@ -1,8 +1,8 @@
-using Elsa.Elasticsearch.Extensions;
-using Elsa.Elasticsearch.Modules.Management;
-using Elsa.EntityFrameworkCore.Modules.Management;
-using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
+using Elsa.Persistence.EFCore.Modules.Management;
+using Elsa.Persistence.EFCore.Modules.Runtime;
+using Elsa.Persistence.Elasticsearch.Extensions;
+using Elsa.Persistence.Elasticsearch.Modules.Management;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration; 

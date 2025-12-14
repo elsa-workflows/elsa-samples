@@ -1,8 +1,8 @@
 using Elsa.Extensions;
-using Elsa.MongoDb.Extensions;
-using Elsa.MongoDb.Modules.Identity;
-using Elsa.MongoDb.Modules.Management;
-using Elsa.MongoDb.Modules.Runtime;
+using Elsa.Persistence.MongoDb.Extensions;
+using Elsa.Persistence.MongoDb.Modules.Identity;
+using Elsa.Persistence.MongoDb.Modules.Management;
+using Elsa.Persistence.MongoDb.Modules.Runtime;
 
 var builder = WebApplication.CreateBuilder(args);
 var mongoDbConnectionString = builder.Configuration.GetConnectionString("MongoDb") ?? "mongodb://localhost:27017/elsa";

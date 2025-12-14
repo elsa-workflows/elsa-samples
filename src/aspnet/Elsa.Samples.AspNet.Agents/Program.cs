@@ -1,8 +1,8 @@
 using Elsa.Agents;
-using Elsa.EntityFrameworkCore.Extensions;
-using Elsa.EntityFrameworkCore.Modules.Management;
-using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
+using Elsa.Persistence.EFCore.Extensions;
+using Elsa.Persistence.EFCore.Modules.Management;
+using Elsa.Persistence.EFCore.Modules.Runtime;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,7 +44,7 @@ builder.Services.AddElsa(elsa =>
         .UseAgentsApi();
 });
 
-builder.Services.Configure<AgentsOptions>(options => builder.Configuration.GetSection("Agents").Bind(options));
+builder.Services.Configure<AgentOptions>(options => builder.Configuration.GetSection("Agents").Bind(options));
 builder.Services.AddCors(cors => cors.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().WithExposedHeaders("*")));
 
 var app = builder.Build();

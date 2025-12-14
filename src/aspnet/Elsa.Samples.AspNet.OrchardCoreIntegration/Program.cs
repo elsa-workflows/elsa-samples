@@ -1,12 +1,12 @@
 ﻿using Elsa.Agents;
-using Elsa.EntityFrameworkCore.Extensions;
-using Elsa.EntityFrameworkCore.Modules.Management;
-using Elsa.EntityFrameworkCore.Modules.Runtime;
 using Elsa.Extensions;
 using Elsa.Samples.AspNet.OrchardCoreIntegration;
-using Elsa.EntityFrameworkCore.Modules.Identity;
 using Elsa.OrchardCore.Client.Options;
 using Elsa.OrchardCore.Options;
+using Elsa.Persistence.EFCore.Extensions;
+using Elsa.Persistence.EFCore.Modules.Identity;
+using Elsa.Persistence.EFCore.Modules.Management;
+using Elsa.Persistence.EFCore.Modules.Runtime;
 using Elsa.Workflows.Management;
 using WebhooksCore.Options;
 
@@ -58,7 +58,7 @@ builder.Services.AddElsa(elsa =>
 });
 
 builder.Services.AddControllers();
-builder.Services.Configure<AgentsOptions>(options => builder.Configuration.GetSection("Agents").Bind(options));
+builder.Services.Configure<AgentOptions>(options => builder.Configuration.GetSection("Agents").Bind(options));
 builder.Services.Configure<WebhookSourcesOptions>(options => builder.Configuration.GetSection("Webhooks").Bind(options));
 builder.Services.Configure<OrchardCoreOptions>(options => builder.Configuration.GetSection("OrchardCore").Bind(options));
 builder.Services.Configure<OrchardCoreClientOptions>(options => builder.Configuration.GetSection("OrchardCore:Client").Bind(options));
