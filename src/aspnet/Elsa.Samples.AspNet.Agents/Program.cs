@@ -44,7 +44,7 @@ builder.Services.AddElsa(elsa =>
         .UseAgentsApi();
 });
 
-builder.Services.Configure<AgentOptions>(options => builder.Configuration.GetSection("Agents").Bind(options));
+builder.Services.Configure<AgentsOptions>(options => builder.Configuration.GetSection("Agents").Bind(options));
 builder.Services.AddCors(cors => cors.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().WithExposedHeaders("*")));
 
 var app = builder.Build();

@@ -4,9 +4,9 @@
     <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <PropertyGroup>
-    <ElsaVersion>3.6.0-preview.4063</ElsaVersion>
-    <ElsaStudioVersion>3.6.0-preview.1298</ElsaStudioVersion>
-    <ElsaExtensionsVersion>3.6.0-preview.189</ElsaExtensionsVersion>
+    <ElsaVersion>3.6.0-preview.4068</ElsaVersion>
+    <ElsaStudioVersion>3.6.0-preview.1299</ElsaStudioVersion>
+    <ElsaExtensionsVersion>3.6.0-preview.194</ElsaExtensionsVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Elsa.Studio" Version="$(ElsaStudioVersion)" />
@@ -52,6 +52,7 @@
     <PackageVersion Include="Elsa.Agents.Persistence" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.Agents.Persistence.EFCore" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.Agents.Persistence.EFCore.Sqlite" Version="$(ElsaExtensionsVersion)" />
+    <PackageVersion Include="Elsa.Agents.OpenAI" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.ServiceBus.AzureServiceBus" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.Persistence.Dapper" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.DropIns" Version="$(ElsaExtensionsVersion)" />
@@ -63,7 +64,7 @@
     <PackageVersion Include="Elsa.ServiceBus.MassTransit.RabbitMq" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.Persistence.MongoDb" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.OrchardCore" Version="$(ElsaExtensionsVersion)" />
-    <PackageVersion Include="Elsa.Scheduling.Hangfire" Version="3.6.0-preview.188" />
+    <PackageVersion Include="Elsa.Scheduling.Hangfire" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.Scheduling.Quartz" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.Studio.Agents" Version="$(ElsaExtensionsVersion)" />
     <PackageVersion Include="Elsa.Studio.Webhooks" Version="$(ElsaExtensionsVersion)" />
@@ -83,6 +84,7 @@
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.1" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.1" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
+    <PackageVersion Include="Microsoft.Agents.AI.Workflows" Version="1.0.0-preview.251204.1" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.1" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.1" PrivateAssets="all" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.1" />

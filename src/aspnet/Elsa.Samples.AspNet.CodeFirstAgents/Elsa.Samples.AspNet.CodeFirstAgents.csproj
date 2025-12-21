@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <ItemGroup>
+        <PackageReference Include="Elsa.Agents"/>
+        <PackageReference Include="Elsa.Agents.Persistence.EFCore.SqLite"/>
+        <PackageReference Include="Elsa.Agents.OpenAI"/>
+        <PackageReference Include="Elsa.Workflows.Runtime.Distributed"/>
+        <PackageReference Include="Microsoft.Agents.AI.Workflows"/>
+    </ItemGroup>
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\_Host.cshtml" />
+    </ItemGroup>
+</Project>
