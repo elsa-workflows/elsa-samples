@@ -4,9 +4,9 @@
     <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <PropertyGroup>
-    <ElsaVersion>3.6.0-preview.4068</ElsaVersion>
-    <ElsaStudioVersion>3.6.0-preview.1299</ElsaStudioVersion>
-    <ElsaExtensionsVersion>3.6.0-preview.194</ElsaExtensionsVersion>
+      <ElsaVersion>3.6.0-preview.4162</ElsaVersion>
+      <ElsaStudioVersion>3.6.0-preview.1345</ElsaStudioVersion>
+      <ElsaExtensionsVersion>3.6.0-activity-host.225</ElsaExtensionsVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Elsa.Studio" Version="$(ElsaStudioVersion)" />

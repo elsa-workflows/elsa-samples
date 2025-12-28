@@ -1,12 +1,17 @@
-using Elsa.Agents;
 using Elsa.Extensions;
 using Elsa.Persistence.EFCore.Extensions;
 using Elsa.Persistence.EFCore.Modules.Management;
 using Elsa.Persistence.EFCore.Modules.Runtime;
+using Elsa.Samples.AspNet.CodeFirstAgents.Agents;
 using Elsa.Workflows.Runtime.Distributed.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
 var services = builder.Services;
+var openApiKey = configuration["OpenAI:ApiKey"]!;
+
+services.AddOpenAIChatClient("gpt-4o", openApiKey);
+services.AddSingleton<StoryWriterAgent>();
 
 // Setup the Elsa Workflows Engine.
 builder.Services.AddElsa(elsa =>
@@ -29,10 +34,10 @@ builder.Services.AddElsa(elsa =>
     elsa.UseIdentity(identity =>
     {
         identity.UseAdminUserProvider();
-        identity.TokenOptions = options => options.SigningKey = "super-secret-tamper-free-token-signing-key";
+        identity.TokenOptions = options => options.SigningKey = "secret-signing-key-4d28f39b-7761-42ea-8985-a38faaba4b2d";
     });
 
-    elsa.UseAgentActivities();
+    elsa.AddActivityHost<StoryWriterAgent>();
     elsa.UseDefaultAuthentication();
 });
 
@@ -48,4 +53,8 @@ app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseWorkflowsApi();
+
+app.MapGet("/", () => "Hello World!");
+app.MapPost("/write-story", async (StoryWriterAgent agent, CancellationToken cancellationToken) => await agent.WriteStoryAsync("A haunted lighthouse", "thriller", cancellationToken));
+
 app.Run();
