@@ -13,12 +13,12 @@ public class StoryWriterAgent(IChatClient chatClient)
 {
     public async Task<string> WriteStoryAsync(string topic, string genre, CancellationToken cancellationToken = default)
     {
-        var writer = chatClient.CreateAIAgent(
+        var writer = chatClient.AsAIAgent(
             name: "Writer",
             instructions: "Write a short story based on the provided topic."
         );
 
-        var editor = chatClient.CreateAIAgent(
+        var editor = chatClient.AsAIAgent(
             name: "Editor",
             instructions: "Improve the draft: fix grammar, improve flow, and tighten the plot."
         );

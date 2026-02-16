@@ -1,4 +1,5 @@
 using Elsa.Extensions;
+using Elsa.Persistence.EFCore.Extensions;
 using Elsa.Persistence.EFCore.Modules.Management;
 using Elsa.Persistence.EFCore.Modules.Runtime;
 
@@ -11,12 +12,8 @@ var identityTokenSection = identitySection.GetSection("Tokens");
 builder.Services.AddElsa(elsa =>
 {
     // Configure management feature to use EF Core.
-    elsa.UseWorkflowManagement(management => management.UseEntityFrameworkCore());
-
-    elsa.UseWorkflowRuntime(runtime =>
-    {
-        runtime.UseEntityFrameworkCore();
-    });
+    elsa.UseWorkflowManagement(management => management.UseEntityFrameworkCore(ef => ef.UseSqlite()));
+    elsa.UseWorkflowRuntime(runtime => runtime.UseEntityFrameworkCore(ef => ef.UseSqlite()));
     
     // Expose API endpoints.
     elsa.UseWorkflowsApi();

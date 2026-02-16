@@ -123,7 +123,8 @@ public class ApiActivityProvider : IActivityProvider
                 // The constructor is called when an activity instance of this type is requested.
                 
                 // Create the activity instance.
-                var activity = context.CreateActivity<SendHttpRequest>();
+                var result = context.CreateActivity<SendHttpRequest>();
+                var activity = result.Activity;
                 
                 // Customize the activity type name.
                 activity.Type = fullTypeName;
@@ -132,7 +133,7 @@ public class ApiActivityProvider : IActivityProvider
                 activity.Url = new(new MemoryBlockReference(urlInputReferenceId));
                 activity.Method = new(new MemoryBlockReference(methodInputReferenceId));
 
-                return activity;
+                return result;
             }
         };
     }
