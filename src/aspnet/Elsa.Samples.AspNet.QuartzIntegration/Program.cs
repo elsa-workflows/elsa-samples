@@ -49,7 +49,6 @@ app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseWorkflowsApi();
-app.UseWorkflows();
 
 // Run the web app.
 app.Run();
